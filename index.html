@@ -174,6 +174,33 @@
 
 
 
+      <!-- Reset password form -->
+      <div class="modal" id="reset-password" style="width: 541.68px; height: 645.28px; position: absolute; top: 191px; left: 447px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden">
+        <div style="width: 542px; height: 645px; left: 0px; top: 0px; position: absolute; background: white"></div>
+        <div style="width: 228px; height: 24px; left: 158px; top: 148px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Roboto; font-weight: 900; word-wrap: break-word">Mật khẩu mới</div>
+        <div style="width: 318px; left: 112px; top: 236px; position: absolute; color: black; font-size: 18px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Xác minh hoàn tất! Hãy đặt lại mật khẩu của bạn</div>
+        <div class="btn-finish-reset-password button-primary">
+          <div style="color: white; font-size: 18px; font-family: Roboto; font-weight: 700; line-height: 27px; word-wrap: break-word">Xong</div>
+        </div>
+        <div style="width: 318.20px; height: 44.40px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 112px; top: 301px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+            <div style="color: #000000; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word; width: 100%">
+                <input type="password" placeholder="Mật khẩu mới" >
+            </div>
+        </div>
+        <div style="width: 318.20px; height: 44.40px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 112px; top: 366px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+            <div style="color: #000000; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word; width: 100%">
+                <input type="password" placeholder="Xác nhận mật khẩu mới" >
+            </div>
+        </div>
+        <img style="width: 51px; height: 51px; left: 245px; top: 65px; position: absolute" src="img/icon-lock.png" />
+        <img class="btn-close" style="width: 42px; height: 32px; left: 490px; top: 13px; position: absolute; cursor: pointer;" src="img/icon-close.png" />
+        <img class="btn-back-on-reset-password" style="width: 26px; height: 26px; left: 29px; top: 20px; position: absolute; cursor: pointer;" src="img/icon-back.png" />
+        <div class="link link-login">Đăng nhập</div>
+        <div style="width: 170px; height: 16px; left: 151px; top: 604px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Bạn đã có tài khoản?</div>
+      </div>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
@@ -206,6 +233,12 @@
             $(".modal-backdrop").css("display", "block");
         }
 
+        function openResetPasswordModal() {
+            closeModal();
+            $("#reset-password").css("display", "block");
+            $(".modal-backdrop").css("display", "block");
+        }
+
         function inputGainsFocus() {
             $($($(this).parent().get(0)).parent().get(0)).css("border-width", "2px");
         }
@@ -234,6 +267,12 @@
         $(".btn-continue-on-forgot-password").click(openVerificationModal);
         
         $(".btn-back-on-verification").click(openForgotPasswordModal);
+
+        $(".btn-continue-on-verification").click(openResetPasswordModal);
+
+        $(".btn-back-on-reset-password").click(openForgotPasswordModal);
+
+        $(".btn-finish-reset-password").click(openLoginModal);
         
     </script>
 </body>
