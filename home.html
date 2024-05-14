@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<head>
+    <title>KPI Master</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+</head>
+<body>
+
+
+    <!-- Side bar -->
+  <div style="width: 1440px; height: 1024px; position: relative; background: white">
+    <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: absolute; opacity: 0.80; background: #078D70;">
+      <div style="width: 336px; height: 1024px; left: 0px; top: 0px; position: absolute; background: #F5F5F5;  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25)"></div>
+      <div class="nav-link" id="nav-kpi-list" style="width: 336px; height: 72px; left: 0px; top: 88px; position: absolute">
+        <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+        <img style="width: 24px; height: 24px; left: 25px; top: 24px; position: absolute" src="img/icon-kpi-list.png" />
+        <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Danh sách KPI</div>
+      </div>
+      <div class="nav-link" id="nav-schedule" style="width: 336px; height: 72px; left: 0px; top: 160px; position: absolute">
+        <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+        <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Lịch trình</div>
+        <img style="width: 24px; height: 24px; left: 25px; top: 24px; position: absolute" src="img/icon-schedule.png" />
+      </div>
+      <div class="nav-link" id="nav-home" style="width: 336px; height: 72px; left: 1px; top: 16px; position: absolute">
+        <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; background: #F8E4FF; border-radius: 10px"></div>
+        <div style="left: 61px; top: 25px; position: absolute; color: #603EBB; font-size: 18px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Trang chủ</div>
+        <img style="width: 28px; height: 28px; left: 22px; top: 19px; position: absolute" src="img/icon-home-active.png" />
+      </div>
+      <div class="nav-link" id="nav-noti" style="width: 336px; height: 72px; left: 0px; top: 232px; position: absolute">
+        <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+        <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Thông báo</div>
+        <img style="width: 30px; height: 30px; left: 22px; top: 21px; position: absolute" src="img/icon-notification.png" />
+        <div style="width: 24px; height: 24px; left: 162px; top: 24px; position: absolute">
+          <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute; background: #7E56DA; border-radius: 5px"></div>
+          <div style="left: 7px; top: 2px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">2</div>
+        </div>
+      </div>
+      <div class="nav-link" id="nav-settings" style="width: 336px; height: 72px; left: 0px; top: 304px; position: absolute">
+        <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+        <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Cài đặt</div>
+        <img style="width: 24px; height: 23.98px; left: 25px; top: 24px; position: absolute" src="img/icon-settings.png" />
+      </div>
+    </div>
+
+
+    <!-- Header -->
+    <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute">
+      <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute; background: #7E56DA"></div>
+      <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px" src="img/icon-user.png" />
+      <div style="left: 87px; top: 18px; position: absolute; color: white; font-size: 28px; font-family: Roboto; font-weight: 700; word-wrap: break-word">KPI Master</div>
+      <div style="left: 1220px; top: 23px; position: absolute; color: white; font-size: 20px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Nguyen-san</div>
+      <div style="width: 361px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 539px; top: 19px; position: absolute; background: white; border-radius: 10px; border: 1px #E1E2E9 solid; justify-content: space-between; align-items: flex-start; display: inline-flex">
+        <div style="color: #8D8F9F; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Tìm kiếm </div>
+        <div style="width: 24px; height: 24px; position: relative">
+            <img style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute;" src="img/icon-search.png"></div>
+        </div>
+      </div>
+      <img style="width: 128px; height: 85px; left: -17px; top: -3px; position: absolute" src="img/logo-white.png" />
+    </div>
+
+
+    <!-- Stats -->
+    <div style="width: 596px; height: 760.72px; left: 364px; top: 361px; position: absolute">
+      <div style="width: 535px; height: 372.72px; left: 0px; top: 388px; position: absolute">
+        <div style="width: 535px; height: 372.72px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
+        <div style="width: 492.20px; height: 28.53px; left: 21.40px; top: 14.27px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Số công việc hoàn thành tuần qua</div>
+        <img style="width: 492.20px; height: 258.58px; left: 21.40px; top: 55.28px; position: absolute" src="img/img-line-chart.png" />
+      </div>
+      <div style="width: 596px; height: 311px; left: 0px; top: 52px; position: absolute">
+        <div style="width: 535px; height: 311px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); border-radius: 10px;"></div>
+        <div style="width: 492.20px; height: 28.53px; left: 9px; top: 16px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Số lượng công việc</div>
+        <div style="width: 233.64px; height: 233.64px; left: 33px; top: 60px; position: absolute">
+          <img style="width: 233.64px; height: 233.64px; left: 0px; top: 0px; position: absolute" src="img/img-pie-chart.png" />
+          <div style="width: 69.46px; height: 39.47px; left: 33.15px; top: 64.73px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 600; word-wrap: break-word">33.3%</div>
+          <div style="width: 69.46px; height: 39.47px; left: 82.09px; top: 156.29px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 600; word-wrap: break-word">33.3%</div>
+          <div style="width: 69.46px; height: 39.47px; left: 135.77px; top: 64.73px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 600; word-wrap: break-word">33.3%</div>
+        </div>
+        <div style="width: 290px; height: 118px; left: 306px; top: 105px; position: absolute">
+          <div style="width: 20px; height: 18px; left: 0px; top: 42px; position: absolute; background: #1E88E5; border-radius: 9999px; border: 1px solid"></div>
+          <div style="width: 20px; height: 18px; left: 0px; top: 71px; position: absolute; background: #F44336; border-radius: 9999px; border: 1px solid"></div>
+          <div style="width: 20px; height: 18px; left: 0px; top: 100px; position: absolute; background: #8BC34A; border-radius: 9999px; border: 1px solid"></div>
+          <div style="width: 165px; height: 16px; left: 26px; top: 42px; position: absolute; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Công việc cần làm (41)</div>
+          <div style="width: 156px; height: 16px; left: 26px; top: 72px; position: absolute; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Công việc quá hạn (41)</div>
+          <div style="width: 140px; height: 16px; left: 26px; top: 101px; position: absolute; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Đã hoàn thành (41)</div>
+          <div style="width: 289px; height: 29px; left: 1px; top: 0px; position: absolute; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Tống số công việc: 123</div>
+        </div>
+      </div>
+      <div style="width: 257.07px; height: 40.17px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Thống kê</div>
+      <div class="link" style="width: 70px; height: 40px; left: 454px; top: 4px; position: absolute; color: #7E56DA; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Chi tiết ></div>
+    </div>
+
+
+    <!-- KPIs -->
+    <div style="width: 482px; height: 731.69px; left: 923px; top: 361px; position: absolute">
+      <div style="width: 257.07px; height: 40.17px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 600; word-wrap: break-word">KPI của bạn</div>
+      <div style="width: 482px; height: 213.69px; left: 0px; top: 52px; position: absolute">
+        <div style="width: 482px; height: 213.69px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
+        <div style="width: 257.07px; height: 40.17px; left: 19.28px; top: 11.25px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Giảng dạy</div>
+        <div style="width: 289.20px; height: 40.17px; left: 19.28px; top: 59.45px; position: absolute"><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 600; word-wrap: break-word">42/60</span><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> công việc đã hoàn tất</span></div>
+        <div style="width: 142.66px; height: 142.66px; left: 270px; top: 20px; position: absolute">
+          
+            <svg width="170" height="170" viewBox="-21.25 -21.25 212.5 212.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                <circle r="75" cx="85" cy="85" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="471px" stroke-dashoffset="0"></circle>
+                <circle r="75" cx="85" cy="85" stroke="#6586d2" stroke-width="20" stroke-linecap="round" stroke-dashoffset="99px" fill="transparent" stroke-dasharray="471px"></circle>
+                <text x="46px" y="99px" fill="#6586d2" font-size="42px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -166px)">79%</text>
+            </svg>
+    
+        </div>
+        <div style="width: 321.33px; height: 40.17px; left: 19.28px; top: 99.61px; position: absolute">
+          <div style="width: 289.20px; height: 40.17px; left: 32.13px; top: 12px; position: absolute; color: black; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Hạn 31/05/2024</div>
+          <img style="width: 22.49px; height: 22.49px; left: 0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
+        </div>
+        <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+      </div>
+      <div style="width: 482px; height: 213.69px; left: 0px; top: 284.97px; position: absolute">
+        <div style="width: 482px; height: 213.69px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
+        <div style="width: 257.07px; height: 40.17px; left: 19.28px; top: 11.25px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Nghiên cứu</div>
+        <div style="width: 289.20px; height: 40.17px; left: 19.28px; top: 59.45px; position: absolute"><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 600; word-wrap: break-word">17/51</span><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> công việc đã hoàn tất</span></div>
+        <div style="width: 142.66px; height: 142.66px; left: 270px; top: 20px; position: absolute">
+          
+            <svg width="170" height="170" viewBox="-21.25 -21.25 212.5 212.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                <circle r="75" cx="85" cy="85" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="471px" stroke-dashoffset="0"></circle>
+                <circle r="75" cx="85" cy="85" stroke="#6586d2" stroke-width="20" stroke-linecap="round" stroke-dashoffset="99px" fill="transparent" stroke-dasharray="471px"></circle>
+                <text x="46px" y="99px" fill="#6586d2" font-size="42px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -166px)">79%</text>
+            </svg>
+    
+        </div>
+        <div style="width: 321.33px; height: 40.17px; left: 19.28px; top: 99.61px; position: absolute">
+          <div style="width: 289.20px; height: 40.17px; left: 32.13px; top: 12px; position: absolute; color: black; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Hạn 31/05/2024</div>
+          <img style="width: 22.49px; height: 22.49px; left: -0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
+        </div>
+        <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+      </div>
+      <div style="width: 482px; height: 213.69px; left: 0px; top: 518px; position: absolute">
+        <div style="width: 482px; height: 213.69px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
+        <div style="width: 257.07px; height: 40.17px; left: 19.28px; top: 11.25px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Phục vụ</div>
+        <div style="width: 289.20px; height: 40.17px; left: 19.28px; top: 59.45px; position: absolute"><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 700; word-wrap: break-word">13/29</span><span style="color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word"> công việc đã hoàn tất</span></div>
+        <div style="width: 142.66px; height: 142.66px; left: 270px; top: 20px; position: absolute">
+            <svg width="170" height="170" viewBox="-21.25 -21.25 212.5 212.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                <circle r="75" cx="85" cy="85" fill="transparent" stroke="#e0e0e0" stroke-width="20" stroke-dasharray="471px" stroke-dashoffset="0"></circle>
+                <circle r="75" cx="85" cy="85" stroke="#6586d2" stroke-width="20" stroke-linecap="round" stroke-dashoffset="99px" fill="transparent" stroke-dasharray="471px"></circle>
+                <text x="46px" y="99px" fill="#6586d2" font-size="42px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -166px)">79%</text>
+            </svg>
+        </div>
+        <div style="width: 321.33px; height: 40.17px; left: 19.28px; top: 99.61px; position: absolute">
+          <div style="width: 289.20px; height: 40.17px; left: 32.13px; top: 12px; position: absolute; color: black; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Hạn 31/05/2024</div>
+          <img style="width: 22.49px; height: 22.49px; left: -0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
+        </div>
+        <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+      </div>
+      <div class="link" style="width: 70px; height: 40px; left: 398px; top: 4px; position: absolute; color: #7E56DA; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Chi tiết ></div>
+    </div>
+
+
+
+    <!-- Schedule -->
+    <div style="width: 1116.43px; height: 178px; left: 364px; top: 104px; position: absolute">
+      <div class="link" style="width: 84px; height: 40px; left: 957px; top: 4px; position: absolute; color: #7E56DA; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Chi tiết ></div>
+      <div style="width: 257.07px; height: 40.17px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Lịch của bạn</div>
+      <div style="width: 1116.43px; height: 115px; left: 0px; top: 63px; position: absolute">
+        <div style="width: 1041px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px;"></div>
+        <img style="position: absolute; top: 56px; left: 787px" src="img/icon-right-triangle.png" width="16px">
+        <img style="position: absolute; top: 56px; left: 15px" src="img/icon-left-triangle.png" width="16px">
+        <div style="width: 267.43px; height: 18.89px; left: 849px; top: 43px; position: absolute">
+          <div style="width: 236.80px; height: 18.89px; left: 30.63px; top: 0px; position: absolute; color: #1A2022; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">BT UI/UX</div>
+          <div style="width: 15px; height: 15px; left: 0px; top: 2.44px; position: absolute; border-radius: 9999px; border: 1px black solid"></div>
+        </div>
+        <div style="width: 267.43px; height: 18.89px; left: 849px; top: 67px; position: absolute">
+          <div style="width: 236.80px; height: 18.89px; left: 30.63px; top: 0px; position: absolute; color: #1A2022; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">BT ITSS</div>
+          <div style="width: 15px; height: 15px; left: 0px; top: 2.44px; position: absolute; border-radius: 9999px; border: 1px black solid"></div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 43px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Sun</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">07</div>
+          <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 111px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Mon</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">08</div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 179px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Tue</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">09</div>
+          <div style="width: 5px; height: 5px; left: 23px; top: 69px; position: absolute; background: white; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 247px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Wed</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">10</div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 315px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Thu</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">11</div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 383px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Fri</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">12</div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 451px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Sat</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">13</div>
+          <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 519px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Sun</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">14</div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 587px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Mon</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">15</div>
+          <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 52px; height: 78px; left: 655px; top: 13px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Tue</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">16</div>
+        </div>
+        <div style="width: 278px; height: 80px; left: 723px; top: 11px; position: absolute">
+          <div style="width: 41px; height: 41px; left: 5px; top: 39px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 2px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Wed</div>
+          <div style="width: 152px; height: 29px; left: 126px; top: 0px; position: absolute; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Tue, 10/5/2024</div>
+          <div style="width: 52px; height: 29px; left: 0px; top: 45px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Roboto; font-weight: 400; word-wrap: break-word">17</div>
+        </div>
+        <div style="width: 79px; height: 0px; left: 831px; top: 20px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+      </div>
+    </div>
+    
+
+    <!-- Reminder -->
+    <div style="width: 1041px; height: 49.95px; left: 364px; top: 296px; position: absolute">
+      <div style="width: 1041px; height: 49.95px; left: 0px; top: 0px; position: absolute; background: #FFF1A5; border-radius: 10px;"></div>
+      <div style="width: 683px; height: 20.49px; left: 14px; top: 12px; position: absolute"><span style="color: #FF0000; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Nhắc nhở: </span><span style="color: #FF0000; font-size: 16px; font-family: Roboto; font-weight: 500; word-wrap: break-word">Bạn có 12 công việc quá hạn và 5 công việc đến hạn tuần này</span></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+  <script>
+    
+  </script>
+</body>

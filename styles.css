@@ -99,3 +99,11 @@ input {
 .btn-finish-reset-password {
     width: 318px; height: 45px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 112px; top: 448px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex;
 }
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #F8E4FF;
+}
