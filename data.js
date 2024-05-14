@@ -1,4 +1,6 @@
 const statusValues = ['Sắp tới', 'Hoàn thành', 'Quá hạn'];
+const repeatTypes = ['Không lặp lại', 'Lặp lại hàng tuần', 'Lặp lại hàng tháng', 'Lặp lại mỗi 3 tháng', 'Lặp lại mỗi 6 tháng', 'Lặp lại hàng năm'];
+const notiTypes = ['Không nhắc nhở', 'Nhắc nhở trước 1 giờ', 'Nhắc nhở trước 1 ngày', 'Nhắc nhở trước 3 ngày', 'Nhắc nhở trước 1 tuần'];
 
 const kpis = [
     {

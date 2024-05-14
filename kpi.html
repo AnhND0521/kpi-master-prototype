@@ -11,7 +11,7 @@
 
 
     <!-- Side bar -->
-    <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: fixed; opacity: 0.80; background: #078D70; z-index: 999;">
+    <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: fixed; opacity: 0.80; background: #078D70; z-index: 1;">
         <div style="width: 336px; height: 1024px; left: 0px; top: 0px; position: absolute; background: #F5F5F5;  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25)"></div>
         <div class="nav-link" id="nav-kpi-list" style="width: 336px; height: 72px; left: 0px; top: 88px; position: absolute; background: #F8E4FF">
           <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
@@ -47,7 +47,7 @@
 
 
     <!-- Header -->
-    <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 999;">
+    <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 1;">
         <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute; background: #7E56DA"></div>
         <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px" src="img/icon-user.png" />
         <div style="left: 87px; top: 18px; position: absolute; color: white; font-size: 28px; font-family: Arial; font-weight: 700; word-wrap: break-word">KPI Master</div>
@@ -71,7 +71,7 @@
 
 
     <!-- Current KPIs -->
-    <div style="width: 1047px; height: 455px; left: 391px; top: 213px; position: absolute">
+    <div id="table-current-kpis" style="width: 1047px; height: 455px; left: 391px; top: 213px; position: absolute">
       <div style="width: 375px; height: 25px; left: 19px; top: 0px; position: absolute; color: black; font-size: 24px; font-family: Arial; font-weight: 500; word-wrap: break-word">KPI hiện tại (3)</div>
       <div style="width: 982px; height: -0px; left: 1px; top: 109px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
       <div style="width: 160px; height: 25px; left: 20px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên KPI</div>
@@ -79,7 +79,7 @@
       <div style="width: 194px; height: 25px; left: 356px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lượng hoàn thành</div>
       <div style="width: 213px; height: 25px; left: 575px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Phần trăm hoàn thành</div>
       <div style="width: 213px; height: 25px; left: 834px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Hành động</div>
-      <div style="width: 982px; height: 115px; left: 1px; top: 110px; position: absolute">
+      <!-- <div style="width: 982px; height: 115px; left: 1px; top: 110px; position: absolute">
         <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
         <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Giảng dạy</div>
         <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">31/05</div>
@@ -92,8 +92,8 @@
         <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 833px; top: 32px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
           <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
         </div>
-      </div>
-      <div style="width: 982px; height: 115px; left: 0px; top: 340px; position: absolute">
+      </div> -->
+      <!-- <div style="width: 982px; height: 115px; left: 0px; top: 340px; position: absolute">
         <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
         <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Phục vụ</div>
         <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">31/05</div>
@@ -120,7 +120,7 @@
           <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #7DA8F0; border-radius: 9999px"></div>
         </div>
-      </div>
+      </div> -->
     </div>
 
 
@@ -171,11 +171,220 @@
 
 
     <!-- Add KPI button -->
-    <div class="button-primary" style="width: 134px; height: 40px; padding-top: 8px; padding-bottom: 8px; padding-left: 6px; padding-right: 20px; left: 1198px; top: 203px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 3px; display: inline-flex">
+    <div id="btn-add-kpi" class="button-primary" style="width: 134px; height: 40px; padding-top: 8px; padding-bottom: 8px; padding-left: 6px; padding-right: 20px; left: 1198px; top: 203px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 3px; display: inline-flex">
       <img style="width: 29px; height: 28px" src="img/icon-plus.png" />
       <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">KPI mới</div>
     </div>
+
+    <div class="modal-backdrop"></div>
+
+    <!-- Add KPI modal 1 -->
+    <div class="modal" id="modal-add-kpi-1" style="position: fixed; top: 40px; left: 200px; z-index: 999; width: 1063px; height: 868px; padding-right: 1px; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: none">
+        <div style="align-self: stretch; height: 64px; padding-top: 19px; padding-bottom: 20px; padding-left: 53px; padding-right: 48px; background: #F9F5FF; justify-content: flex-end; align-items: flex-start; gap: 562px; display: inline-flex">
+          <div style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm KPI</div>
+          <div class="btn-close" style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; cursor: pointer;">
+          </div>
+        </div>
+        <div style="align-self: stretch; flex: 1 1 0; padding-top: 30px; padding-bottom: 120px; padding-left: 305px; padding-right: 292px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 36px; display: inline-flex">
+          <div style="width: 446px; height: 78px; position: relative">
+            <div style="width: 220px; height: 35px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 600; word-wrap: break-word">Nhập thông tin KPI</div>
+            <div style="width: 220px; height: 35px; left: 226px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm công việc</div>
+            <div style="width: 44px; height: 44px; left: 91px; top: 0px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+            <div style="width: 185px; height: 0px; left: 135px; top: 17px; position: absolute; border: 5px #7E56DA solid"></div>
+            <div style="width: 31px; height: 31px; left: 320px; top: 6px; position: absolute; background: #C8C8C8; border-radius: 9999px; border: 1px #7E56DA solid"></div>
+          </div>
+          <div style="width: 465px; height: 540px; position: relative">
+            <div style="width: 465px; height: 62px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 92px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 500; line-height: 30px; word-wrap: break-word; width: 100%">
+                <input type="text" placeholder="Tên KPI *">
+              </div>
+            </div>
+            <div style="width: 465px; height: 62px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 180px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%">
+                <input type="text" placeholder="Mô tả">
+              </div>
+            </div>
+            <div style="width: 465px; height: 62px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 357px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: space-between; align-items: center; display: inline-flex">
+              <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                <img src="img/icon-repeat-faded.png" style="width: 25px; height: 25px; position: relative">
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%">
+                    <select name="repeat" id="repeat" style="width: 390px; color: #8D8F9F;">
+                        <!-- <option value="" disabled selected>Lặp lại</option> -->
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div style="width: 465px; height: 63px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 268px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: space-between; align-items: center; display: inline-flex">
+              <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                <img style="width: 25px; height: 25px" src="img/icon-date-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%">
+                    <input id="due" type="text" placeholder="Thời hạn" style="width: 390px; color: #8D8F9F">
+                </div>
+              </div>
+              <!-- <img style="width: 25px; height: 25px" src="https://via.placeholder.com/25x25" /> -->
+            </div>
+            <div style="width: 220px; height: 35px; left: 123px; top: 0px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">Thông tin KPI</div>
+            <div class="button-primary" id="btn-continue" style="width: 465px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 490px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+              <div style="color: white; font-size: 24px; font-family: Arial; font-weight: 600; line-height: 36px; word-wrap: break-word">Tiếp</div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
+
+
+  <!-- Add KPI modal 2 -->
+  <div class="modal" id="modal-add-kpi-2" style="position: fixed; top: 40px; left: 200px; z-index: 999; width: 1063px; height: 868px; padding-right: 1px; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: none;">
+    <div style="align-self: stretch; height: 64px; padding-top: 19px; padding-bottom: 20px; padding-left: 53px; padding-right: 48px; background: #F9F5FF; justify-content: flex-end; align-items: flex-start; gap: 562px; display: inline-flex">
+      <div style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm KPI</div>
+      <div class="btn-close" style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; cursor: pointer;">
+      </div>
+    </div>
+    <div style="width: 1160px; height: 804px; position: relative; display: block">
+      <div style="width: 446px; height: 77px; position: absolute; top: 30px; left: 315px">
+        <div style="width: 220px; height: 35px; left: 0px; top: 42px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhập thông tin KPI</div>
+        <div style="width: 220px; height: 35px; left: 226px; top: 42px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 600; word-wrap: break-word">Thêm công việc</div>
+        <div style="width: 31px; height: 31px; left: 94px; top: 6px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
+        <div style="width: 189px; height: 0px; left: 125px; top: 17px; position: absolute; border: 5px #7E56DA solid"></div>
+        <div style="width: 44px; height: 44px; left: 314px; top: 0px; position: absolute; background: #7E56DA; border-radius: 9999px; border: 2px #7E56DA solid"></div>
+      </div>
+      <img id="btn-back" style="position: absolute; top: 40px; left: 73px; width: 26px; height: 26px; cursor: pointer;" src="img/icon-back.png" />
+      <div style="position: absolute; top: 129px; left: 539px; width: 481px; height: 0px; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+      <div style="width: 394px; height: 451px; position: absolute; top: 143px; left: 73px">
+        <div class="button-primary" style="width: 394px; height: 42px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 409px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 20px; font-family: Arial; font-weight: 600; line-height: 30px; word-wrap: break-word">Thêm</div>
+        </div>
+        <div style="width: 192px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 200px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+            <img style="width: 25px; height: 27px" src="img/icon-clock-faded.png" />
+            <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <input id="task-start" type="text" placeholder="Bắt đầu">
+            </div>
+          </div>
+        </div>
+        <div style="width: 192px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 202px; top: 200px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+            <img style="width: 25px; height: 27px" src="img/icon-clock-faded.png" />
+            <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <input id="task-end" type="text" placeholder="Kết thúc">
+            </div>
+          </div>
+        </div>
+        <div style="width: 394px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 133px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+            <img style="width: 25px; height: 25px" src="img/icon-date-faded.png" />
+            <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 320px">
+                <input id="task-date" type="text" placeholder="Ngày">
+            </div>
+          </div>
+        </div>
+        <div style="width: 394px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 267px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 68px; display: inline-flex">
+          <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+            <div style="width: 25px; height: 25px; position: relative">
+              <img src="img/icon-repeat-faded.png" width="25px">
+            </div>
+            <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <select name="repeat" id="task-repeat" style="width: 320px; color: #8D8F9F;">
+                    <!-- <option value="" disabled selected>Lặp lại</option> -->
+                </select>
+              </div>
+          </div>
+          <div style="width: 16px; height: 16px; position: relative">
+            <!-- <div style="width: 9.33px; height: 5.33px; left: 3.33px; top: 10.67px; position: absolute; background: #8D8F9F"></div> -->
+          </div>
+        </div>
+        <div style="width: 394px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 334px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: space-between; align-items: center; display: inline-flex">
+          <div style="width: 469px; height: 37px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+            <img style="width: 26px; height: 26px" src="img/icon-notification-faded.png" />
+            <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <select name="noti" id="task-noti" style="width: 320px; color: #8D8F9F;">
+                    <!-- <option value="" disabled selected>Lặp lại</option> -->
+                </select>
+              </div>
+          </div>
+          <div style="width: 16px; height: 16px; position: relative">
+            <!-- <div style="width: 9.33px; height: 5.33px; left: 3.33px; top: 10.67px; position: absolute; background: #8D8F9F"></div> -->
+          </div>
+        </div>
+        <div style="width: 220px; height: 35px; left: 87px; top: 0px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">Thêm công việc</div>
+        <div style="width: 394px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 0px; top: 66px; position: absolute; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+            <input type="text" placeholder="Tên công việc">
+          </div>
+        </div>
+      </div>
+      <div style="width: 400px; height: 428px; position: absolute; top: 150px; left: 580px; overflow: auto;">
+        <div style="width: 354px; height: 35px; left: 21px; top: 0px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">Danh sách công việc</div>
+        <div style="width: 395px; height: 115px; left: 0px; top: 59px; position: absolute">
+            <div style="width: 395px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F5EEFF; border-radius: 15px"></div>
+            <div class="button-primary" style="width: 34px; height: 34px; left: 341px; top: 41px; position: absolute; border-radius: 9999px;">
+                <div style="width: 34px; height: 34px; left: 0px; top: 0px; position: absolute; border-radius: 9999px;"></div>
+                <div style="width: 22.17px; height: 0px; left: 5.91px; top: 17px; position: absolute; border: 2px white solid"></div>
+              </div>
+            <div style="width: 50px; height: 35px; left: 27px; top: 13px; position: absolute; text-align: right; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">12/05</div>
+            <div style="width: 50px; height: 17px; left: 24px; top: 42px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">9:20</div>
+            <div style="width: 50px; height: 17px; left: 24px; top: 85px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:45</div>
+            <div style="width: 175px; height: 29px; left: 109px; top: 11px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc ABC</div>
+            <div style="width: 175px; height: 29px; left: 129px; top: 51px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lặp lại: Không</div>
+            <div style="width: 89px; height: 0px; left: 93px; top: 13px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+            <img style="width: 17px; height: 17px; left: 15px; top: 14px; position: absolute" src="img/icon-date.png" />
+            <div style="width: 17px; height: 0px; left: 49px; top: 63px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <div style="width: 12px; height: 12px; left: 109px; top: 45px; position: absolute">
+              <!-- <div style="width: 12px; height: 12px; left: 0px; top: 0px; position: absolute; background: #7C7474"></div> -->
+              <img src="img/icon-repeat-faded.png" width="12px">
+            </div>
+            <div style="width: 175px; height: 29px; left: 129px; top: 77px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhắc nhở: Trước 1 ngày</div>
+            <img style="width: 15px; height: 15px; left: 107px; top: 77px; position: absolute" src="img/icon-notification-faded.png" />
+        </div>
+        <div style="width: 395px; height: 115px; left: 0px; top: 186px; position: absolute">
+          <div style="width: 395px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F5EEFF; border-radius: 15px"></div>
+          <div class="button-primary" style="width: 34px; height: 34px; left: 341px; top: 41px; position: absolute; border-radius: 9999px;">
+            <div style="width: 34px; height: 34px; left: 0px; top: 0px; position: absolute; border-radius: 9999px;"></div>
+            <div style="width: 22.17px; height: 0px; left: 5.91px; top: 17px; position: absolute; border: 2px white solid"></div>
+          </div>
+          <div style="width: 50px; height: 35px; left: 27px; top: 13px; position: absolute; text-align: right; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">12/05</div>
+          <div style="width: 50px; height: 17px; left: 24px; top: 42px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">9:20</div>
+          <div style="width: 50px; height: 17px; left: 24px; top: 85px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:45</div>
+          <div style="width: 175px; height: 29px; left: 109px; top: 11px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc ABC</div>
+          <div style="width: 175px; height: 29px; left: 129px; top: 51px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lặp lại: Không</div>
+          <div style="width: 89px; height: 0px; left: 93px; top: 13px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+          <img style="width: 17px; height: 17px; left: 15px; top: 14px; position: absolute" src="img/icon-date.png" />
+          <div style="width: 17px; height: 0px; left: 49px; top: 63px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+          <div style="width: 12px; height: 12px; left: 109px; top: 45px; position: absolute">
+            <!-- <div style="width: 12px; height: 12px; left: 0px; top: 0px; position: absolute; background: #7C7474"></div> -->
+            <img src="img/icon-repeat-faded.png" width="12px">
+          </div>
+          <div style="width: 175px; height: 29px; left: 129px; top: 77px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhắc nhở: Trước 1 ngày</div>
+          <img style="width: 15px; height: 15px; left: 107px; top: 77px; position: absolute" src="img/icon-notification-faded.png" />
+        </div>
+        <div style="width: 395px; height: 115px; left: 0px; top: 313px; position: absolute">
+            <div style="width: 395px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F5EEFF; border-radius: 15px"></div>
+            <div class="button-primary" style="width: 34px; height: 34px; left: 341px; top: 41px; position: absolute; border-radius: 9999px;">
+                <div style="width: 34px; height: 34px; left: 0px; top: 0px; position: absolute; border-radius: 9999px;"></div>
+                <div style="width: 22.17px; height: 0px; left: 5.91px; top: 17px; position: absolute; border: 2px white solid"></div>
+              </div>
+            <div style="width: 50px; height: 35px; left: 27px; top: 13px; position: absolute; text-align: right; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">12/05</div>
+            <div style="width: 50px; height: 17px; left: 24px; top: 42px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">9:20</div>
+            <div style="width: 50px; height: 17px; left: 24px; top: 85px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:45</div>
+            <div style="width: 175px; height: 29px; left: 109px; top: 11px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc ABC</div>
+            <div style="width: 175px; height: 29px; left: 129px; top: 51px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lặp lại: Không</div>
+            <div style="width: 89px; height: 0px; left: 93px; top: 13px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+            <img style="width: 17px; height: 17px; left: 15px; top: 14px; position: absolute" src="img/icon-date.png" />
+            <div style="width: 17px; height: 0px; left: 49px; top: 63px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px black solid"></div>
+            <div style="width: 12px; height: 12px; left: 109px; top: 45px; position: absolute">
+              <!-- <div style="width: 12px; height: 12px; left: 0px; top: 0px; position: absolute; background: #7C7474"></div> -->
+              <img src="img/icon-repeat-faded.png" width="12px">
+            </div>
+            <div style="width: 175px; height: 29px; left: 129px; top: 77px; position: absolute; color: #7C7474; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhắc nhở: Trước 1 ngày</div>
+            <img style="width: 15px; height: 15px; left: 107px; top: 77px; position: absolute" src="img/icon-notification-faded.png" />
+        </div>
+      </div>
+      <div id="btn-done" class="button-primary" style="position: absolute; top: 693px; left: 308px; width: 465px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+        <div style="color: white; font-size: 24px; font-family: Arial; font-weight: 600; line-height: 36px; word-wrap: break-word">Xong</div>
+      </div>
+    </div>
+  </div>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -183,6 +392,74 @@
   <script src="common.js"></script>
   
   <script>
-    
+    function onClickKpi(id) {
+        window.location.href = `kpi-details.html?id=${id}`
+    }
+
+    $("#due,#task-date").focus((event) => $(event.target).attr("type", "date"));
+    $("#due,#task-date").blur((event) => $(event.target).attr("type", "text"));
+    $("#task-start,#task-end").focus((event) =>$(event.target).attr("type", "time"));
+    $("#task-start,#task-end").blur(() => $(event.target).attr("type", "text"));
+    $("#repeat,#task-repeat").append(repeatTypes.map((r,i) => $(`<option value="${i}" ${i===0?'selected':''}>${r}</option>`)));
+    $("#task-noti").append(notiTypes.map((n,i) => $(`<option value="${i}" ${i===1?'selected':''}>${n}</option>`)));
+
+    function closeModal() {
+        $(".modal-backdrop").css("display", "none");
+        $(".modal").css("display", "none");
+    }
+
+    function openModalAddKpi1() {
+        closeModal();
+        $(".modal-backdrop").css("display", "block");
+        $("#modal-add-kpi-1").css("display", "inline-flex");
+    }
+
+    function openModalAddKpi2() {
+        closeModal();
+        $(".modal-backdrop").css("display", "block");
+        $("#modal-add-kpi-2").css("display", "inline-flex");
+    }
+
+    function addKpi() {
+        closeModal();
+    }
+
+    $("#btn-add-kpi").click(openModalAddKpi1);
+    $(".btn-close").click(closeModal);
+    $("#btn-continue").click(openModalAddKpi2);
+    $("#btn-back").click(openModalAddKpi1);
+    $("#btn-done").click(addKpi);
+
+
+    const currentKpis = getCurrentKpis();
+
+    let y = 110;
+
+    currentKpis.forEach(kpi => {
+        const percentage = getCompletedPercentage(kpi);
+        const strokeDasharray = 251.20000000000002;
+        const strokeDashoffset = (100-percentage)/100*strokeDasharray;
+
+        const row = $(`
+      <div style="width: 982px; height: 115px; left: 1px; top: ${y}px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: ${y%2==0 ? '#F9F5FF' : 'white'}"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; overflow: hidden; text-overflow: ellipsis;" title="${kpi.name}">${kpi.name}</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${kpi.due.getDate()}/${kpi.due.getMonth()+1}</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${getNumberOfFinishedTasks(kpi)}/${kpi.tasks.length} công việc</div>
+        <div style="width: 74.77px; height: 74.77px; left: 618px; top: 8px; position: absolute">
+            <svg width="100" height="100" viewBox="-12.5 -12.5 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                <circle r="40" cx="50" cy="50" fill="transparent" stroke="#e0e0e0" stroke-width="8" stroke-dasharray="${strokeDasharray}px" stroke-dashoffset="0"></circle>
+                <circle r="40" cx="50" cy="50" stroke="#4285f4" stroke-width="8" stroke-linecap="round" stroke-dashoffset="${strokeDashoffset}px" fill="transparent" stroke-dasharray="${strokeDasharray}px"></circle>
+                <text x="24px" y="57px" fill="#4285f4" font-size="28px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -96px)">${percentage}%</text>
+            </svg>
+        </div>
+        <div class="button-primary" onclick="onClickKpi(${kpi.id})" style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 833px; top: 32px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+      </div>`);
+
+        $("#table-current-kpis").append(row);
+        y += 115;
+    });
   </script>
 </body>
