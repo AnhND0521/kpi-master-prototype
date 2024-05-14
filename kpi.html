@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <title>KPI Master</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
+</head>
+<body>
+
+<div style="width: 1440px; height: 1024px; position: relative; background: white">
+
+
+    <!-- Side bar -->
+    <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: fixed; opacity: 0.80; background: #078D70; z-index: 999;">
+        <div style="width: 336px; height: 1024px; left: 0px; top: 0px; position: absolute; background: #F5F5F5;  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25)"></div>
+        <div class="nav-link" id="nav-kpi-list" style="width: 336px; height: 72px; left: 0px; top: 88px; position: absolute; background: #F8E4FF">
+          <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+          <img style="width: 24px; height: 24px; left: 25px; top: 24px; position: absolute" src="img/icon-kpi-list-active.png" />
+          <div style="left: 61px; top: 25px; position: absolute; color: #603EBB; font-size: 18px; font-family: Arial; font-weight: 700; word-wrap: break-word">Danh sách KPI</div>
+        </div>
+        <div class="nav-link" id="nav-schedule" style="width: 336px; height: 72px; left: 0px; top: 160px; position: absolute">
+          <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+          <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lịch trình</div>
+          <img style="width: 24px; height: 24px; left: 25px; top: 24px; position: absolute" src="img/icon-schedule.png" />
+        </div>
+        <div class="nav-link" id="nav-home" style="width: 336px; height: 72px; left: 0px; top: 16px; position: absolute">
+          <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+          <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Trang chủ</div>
+          <img style="width: 28px; height: 28px; left: 22px; top: 19px; position: absolute" src="img/icon-home.png" />
+        </div>
+        <div class="nav-link" id="nav-noti" style="width: 336px; height: 72px; left: 0px; top: 232px; position: absolute">
+          <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+          <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thông báo</div>
+          <img style="width: 30px; height: 30px; left: 22px; top: 21px; position: absolute" src="img/icon-notification.png" />
+          <div style="width: 24px; height: 24px; left: 162px; top: 24px; position: absolute">
+            <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute; background: #7E56DA; border-radius: 5px"></div>
+            <div style="left: 7px; top: 2px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Arial; font-weight: 700; word-wrap: break-word">2</div>
+          </div>
+        </div>
+        <div class="nav-link" id="nav-settings" style="width: 336px; height: 72px; left: 0px; top: 304px; position: absolute">
+          <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
+          <div style="left: 61px; top: 25px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Cài đặt</div>
+          <img style="width: 24px; height: 23.98px; left: 25px; top: 24px; position: absolute" src="img/icon-settings.png" />
+        </div>
+    </div>
+
+
+
+    <!-- Header -->
+    <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 999;">
+        <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute; background: #7E56DA"></div>
+        <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px" src="img/icon-user.png" />
+        <div style="left: 87px; top: 18px; position: absolute; color: white; font-size: 28px; font-family: Arial; font-weight: 700; word-wrap: break-word">KPI Master</div>
+        <div style="left: 1220px; top: 23px; position: absolute; color: white; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Nguyen-san</div>
+        <div style="width: 361px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 539px; top: 19px; position: absolute; background: white; border-radius: 10px; border: 1px #E1E2E9 solid; justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="color: #000000; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word; width: 100%">
+                <input type="text" placeholder="Tìm kiếm" >
+            </div>
+          <div style="width: 24px; height: 24px; position: relative">
+              <img style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute;" src="img/icon-search.png"></div>
+          </div>
+        </div>
+        <img style="width: 128px; height: 85px; left: -17px; top: -3px; position: fixed" src="img/logo-white.png" />
+    </div>
+
+
+    
+    <div style="width: 375px; height: 25px; left: 411px; top: 131px; position: absolute; color: black; font-size: 32px; font-family: Arial; font-weight: 500; word-wrap: break-word">Danh sách KPI</div>
+    <div style="width: 982px; height: -0px; left: 392px; top: 699.50px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+
+
+
+    <!-- Current KPIs -->
+    <div style="width: 1047px; height: 455px; left: 391px; top: 213px; position: absolute">
+      <div style="width: 375px; height: 25px; left: 19px; top: 0px; position: absolute; color: black; font-size: 24px; font-family: Arial; font-weight: 500; word-wrap: break-word">KPI hiện tại (3)</div>
+      <div style="width: 982px; height: -0px; left: 1px; top: 109px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+      <div style="width: 160px; height: 25px; left: 20px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên KPI</div>
+      <div style="width: 160px; height: 25px; left: 218px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Thời hạn</div>
+      <div style="width: 194px; height: 25px; left: 356px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lượng hoàn thành</div>
+      <div style="width: 213px; height: 25px; left: 575px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Phần trăm hoàn thành</div>
+      <div style="width: 213px; height: 25px; left: 834px; top: 66px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Hành động</div>
+      <div style="width: 982px; height: 115px; left: 1px; top: 110px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Giảng dạy</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">31/05</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">42/60 công việc</div>
+        <div style="width: 74.77px; height: 74.77px; left: 644px; top: 19px; position: absolute">
+          <div style="width: 48.55px; height: 24.28px; left: 13.60px; top: 25.25px; position: absolute; text-align: center; color: #4285F4; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">70%</div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #4285F4; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 833px; top: 32px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+      </div>
+      <div style="width: 982px; height: 115px; left: 0px; top: 340px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Phục vụ</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">31/05</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">13/29 công việc</div>
+        <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 834px; top: 32px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+        <div style="width: 74.77px; height: 74.77px; left: 645px; top: 17px; position: absolute">
+          <div style="width: 48.55px; height: 24.28px; left: 13.59px; top: 25.25px; position: absolute; text-align: center; color: #4285F4; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">45%</div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #679CF5; border-radius: 9999px"></div>
+        </div>
+      </div>
+      <div style="width: 982px; height: 115px; left: 0px; top: 225px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: white"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Nghiên cứu</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">31/05</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">17/51 công việc</div>
+        <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 834px; top: 31px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+        <div style="width: 74.77px; height: 74.77px; left: 645px; top: 20px; position: absolute">
+          <div style="width: 48.55px; height: 24.28px; left: 13.59px; top: 25.25px; position: absolute; text-align: center; color: #4285F4; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">33%</div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #7DA8F0; border-radius: 9999px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Past KPIs -->
+    <div style="width: 1044px; height: 344px; left: 391px; top: 731px; position: absolute">
+      <div style="width: 982px; height: -0px; left: 2px; top: 113px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+      <div style="width: 375px; height: 25px; left: 20px; top: 0px; position: absolute; color: black; font-size: 24px; font-family: Arial; font-weight: 500; word-wrap: break-word">KPI đã kết thúc</div>
+      <div style="width: 160px; height: 25px; left: 21px; top: 70px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên KPI</div>
+      <div style="width: 160px; height: 25px; left: 218px; top: 70px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Thời hạn</div>
+      <div style="width: 194px; height: 25px; left: 356px; top: 70px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lượng hoàn thành</div>
+      <div style="width: 213px; height: 25px; left: 575px; top: 70px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Phần trăm hoàn thành</div>
+      <div style="width: 213px; height: 25px; left: 831px; top: 70px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Hành động</div>
+      <div style="width: 982px; height: 115px; left: 2px; top: 114px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Giảng dạy</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">30/04</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">57/60 công việc</div>
+        <div style="width: 74.77px; height: 74.77px; left: 644px; top: 5px; position: absolute">
+          <div style="width: 48.55px; height: 24.28px; left: 13.60px; top: 25.25px; position: absolute; text-align: center; color: #3076E9; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">95%</div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #3076E9; border-radius: 9999px"></div>
+        </div>
+        <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 829px; top: 32px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+        <div style="width: 165px; height: 31px; left: 607px; top: 80px; position: absolute">
+          <div style="width: 160px; height: 31px; left: 5px; top: 0px; position: absolute; text-align: center; color: #078D70; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Hoàn thành tốt!</div>
+          <img style="width: 18px; height: 18px; left: 0px; top: 5px; position: absolute" src="img/icon-check.png" />
+        </div>
+      </div>
+      <div style="width: 982px; height: 115px; left: 0px; top: 229px; position: absolute">
+        <div style="width: 982px; height: 115px; left: 0px; top: 0px; position: absolute; background: white"></div>
+        <div style="width: 160px; height: 31px; left: 19px; top: 38px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Nghiên cứu</div>
+        <div style="width: 160px; height: 31px; left: 217px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">30/04</div>
+        <div style="width: 160px; height: 31px; left: 355px; top: 38px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">51/51 công việc</div>
+        <div style="width: 100px; height: 43px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 831px; top: 32px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+        </div>
+        <div style="width: 74.77px; height: 74.77px; left: 645px; top: 20px; position: absolute">
+          <div style="width: 60px; height: 25px; left: 8px; top: 24px; position: absolute; text-align: center; color: #2568D6; font-size: 18px; font-family: Arial; font-weight: 500; word-wrap: break-word">100%</div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+          <div style="width: 74.77px; height: 74.77px; left: 0px; top: 0px; position: absolute; background: #2568D6; border-radius: 9999px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Add KPI button -->
+    <div style="width: 134px; height: 40px; padding-top: 8px; padding-bottom: 8px; padding-left: 6px; padding-right: 20px; left: 1198px; top: 203px; position: absolute; background: #7E56DA; border-radius: 10px; justify-content: center; align-items: center; gap: 3px; display: inline-flex">
+      <img style="width: 29px; height: 28px" src="img/icon-plus.png" />
+      <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">KPI mới</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+  <script>
+    
+  </script>
+</body>
