@@ -83,6 +83,46 @@ const kpis = [
             }
         ]   
     },
+    {
+        id: '4',
+        name: 'Giảng dạy',
+        description: '',
+        due: new Date("2024-05-30"),
+        tasks: [
+            {
+                id: '4.1',
+                name: 'Dạy UI/UX',
+                date: new Date("2024-05-16"),
+                start: "9:20",
+                end: "11:45",
+                status: 1
+            },
+            {
+                id: '4.2',
+                name: 'Dạy hệ tương tác',
+                date: new Date("2024-05-13"),
+                start: "12:30",
+                end: "14:00",
+                status: 1
+            },
+            {
+                id: '4.3',
+                name: 'Dạy công nghệ phần mềm',
+                date: new Date("2024-05-14"),
+                start: "15:05",
+                end: "17:30",
+                status: 1
+            },
+            {
+                id: '4.4',
+                name: 'Chấm bài sinh viên',
+                date: new Date("2024-05-15"),
+                start: "17:30",
+                end: "19:00",
+                status: 1
+            }
+        ]   
+    }
 ];
 
 kpis.sort((k1, k2) => k1.due - k2.due);
@@ -110,4 +150,24 @@ const getCurrentKpis = () => {
 
 const getPastKpis = () => {
     return kpis.filter(kpi => kpi.due < new Date() || getCompletedPercentage(kpi) === 100);
+}
+
+const isValidKpi = (kpi) => {
+    return kpi.name.trim().length > 0 && kpi.due;
+}
+
+const getNextKpiId = () => {
+    if (kpis.length === 0) return '1';
+    ids = kpis.map(k => +k.id);
+    console.log(ids);
+    return `${Math.max(...ids) + 1}`;
+}
+
+const saveKpi = (kpi) => {
+    kpi.id = getNextKpiId();
+    kpi.tasks.forEach((t,i) => {
+        t.id = `${kpi.id}.${i+1}`
+    }); 
+    kpis.push(kpi);
+    return kpi;
 }

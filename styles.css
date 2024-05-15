@@ -8,6 +8,11 @@
     cursor: pointer;
 }
 
+.button-primary[disabled] {
+    background-color: #C9B3EF;
+    cursor: auto;
+}
+
 .button-secondary {
     border: 1px #7E56DA solid;
     color: #7E56DA;
