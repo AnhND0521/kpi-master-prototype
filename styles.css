@@ -1,3 +1,7 @@
+::backdrop {
+    background: rgba(0, 0, 0, 0.6)
+}
+
 .button-primary {
     background-color: #7E56DA;
     transition: background-color 0.1s ease-in-out;
@@ -111,6 +115,13 @@ input, select {
 
 .nav-link:hover {
     background-color: #F8E4FF;
+}
+
+dialog[open] { 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    display: inline-flex;
 }
 
 .task-check {
