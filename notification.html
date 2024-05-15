@@ -156,16 +156,16 @@
       </div>
       <div class="link" onclick="markAllAsRead()" style="width: 391px; height: 22px; left: 59px; top: 112px; position: absolute; color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Đánh dấu tất cả là đã đọc</div>`);
 
-        let y = 125;
+        let y = 156;
         let inc = 134;
         notis.forEach((n,i) => {
             notiList.append($(`<div index="${i}" style="width: 928px; height: 167px; left: 59px; top: ${y}px; position: absolute">
-                <div style="width: 921.99px; height: 119px; left: 6.01px; top: 48px; position: absolute; background: ${n.read?'rgba(243, 237, 252, 0.50)':'rgba(231.87, 218.58, 251.80, 0.50)'}; border-radius: 10px"></div>
-                <div class="link" style="width: 207.13px; height: 21.97px; left: 47px; top: 126px; position: absolute; color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word" onclick="markAsRead(event)">Đánh dấu là đã đọc</div>
-                <div class="link" style="width: 307.13px; height: 21.97px; left: 247px; top: 126px; position: absolute; color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word" onclick="markAsRead(event)">Đánh dấu là đã hoàn thành</div>
-                <div style="width: 12px; height: 119px; left: 0px; top: 48px; position: absolute; background: ${n.type===0?'#EAB045':'#FF5E5E'}; border-radius: 10px"></div>
-                <div style="width: 762px; height: 29px; left: 47px; top: 65px; position: absolute; color: #343839; font-size: 20px; font-family: Arial; font-weight: ${n.read ? 400 : 600}; word-wrap: break-word">${n.content}</div>
-                <div style="width: 156.17px; height: 29.29px; left: 726.78px; top: 69.97px; position: absolute; text-align: right; color: #9D8686; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">1:38 AM</div>
+                <div style="width: 921.99px; height: 119px; left: 6.01px; top: 17px; position: absolute; background: ${n.read?'rgba(243, 237, 252, 0.50)':'rgba(231.87, 218.58, 251.80, 0.50)'}; border-radius: 10px"></div>
+                <div class="link" style="width: 207.13px; height: 21.97px; left: 47px; top: 95px; position: absolute; color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word" onclick="markAsRead(event)">Đánh dấu là đã đọc</div>
+                <div class="link" style="width: 307.13px; height: 21.97px; left: 247px; top: 95px; position: absolute; color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word" onclick="markAsRead(event)">Đánh dấu là đã hoàn thành</div>
+                <div style="width: 12px; height: 119px; left: 0px; top: 17px; position: absolute; background: ${n.type===0?'#EAB045':'#FF5E5E'}; border-radius: 10px"></div>
+                <div style="width: 762px; height: 29px; left: 47px; top: 34px; position: absolute; color: #343839; font-size: 20px; font-family: Arial; font-weight: ${n.read ? 400 : 600}; word-wrap: break-word">${n.content}</div>
+                <div style="width: 156.17px; height: 29.29px; left: 726.78px; top: 38.97px; position: absolute; text-align: right; color: #9D8686; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">1:38 AM</div>
             </div>`));
             y += inc;
         });
