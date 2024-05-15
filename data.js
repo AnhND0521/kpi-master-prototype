@@ -8,6 +8,7 @@ const kpis = [
         name: 'Giảng dạy',
         description: '',
         due: new Date("2024-05-31"),
+        repeat: 0,
         tasks: [
             {
                 id: '1.1',
@@ -15,7 +16,9 @@ const kpis = [
                 date: new Date("2024-05-16"),
                 start: "9:20",
                 end: "11:45",
-                status: 0
+                status: 0,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '1.2',
@@ -23,7 +26,9 @@ const kpis = [
                 date: new Date("2024-05-13"),
                 start: "12:30",
                 end: "14:00",
-                status: 1
+                status: 1,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '1.3',
@@ -31,7 +36,9 @@ const kpis = [
                 date: new Date("2024-05-14"),
                 start: "15:05",
                 end: "17:30",
-                status: 1
+                status: 1,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '1.4',
@@ -39,7 +46,9 @@ const kpis = [
                 date: new Date("2024-05-15"),
                 start: "17:30",
                 end: "19:00",
-                status: 2
+                status: 2,
+                repeat: 0,
+                noti: 0
             }
         ]   
     },
@@ -48,6 +57,7 @@ const kpis = [
         name: 'Nghiên cứu',
         description: '',
         due: new Date("2024-05-31"),
+        repeat: 0,
         tasks: [
             {
                 id: '2.1',
@@ -55,7 +65,9 @@ const kpis = [
                 date: new Date("2024-05-16"),
                 start: "9:20",
                 end: "11:45",
-                status: 0
+                status: 0,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '2.2',
@@ -63,7 +75,9 @@ const kpis = [
                 date: new Date("2024-05-18"),
                 start: "12:30",
                 end: "15:50",
-                status: 0
+                status: 0,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '2.3',
@@ -71,7 +85,9 @@ const kpis = [
                 date: new Date("2024-05-22"),
                 start: "6:45",
                 end: "10:05",
-                status: 0
+                status: 0,
+                repeat: 0,
+                noti: 0
             },
             {
                 id: '2.4',
@@ -79,7 +95,9 @@ const kpis = [
                 date: new Date("2024-05-14"),
                 start: "15:00",
                 end: "17:30",
-                status: 1
+                status: 1,
+                repeat: 0,
+                noti: 0
             }
         ]   
     },
@@ -88,6 +106,7 @@ const kpis = [
         name: 'Giảng dạy',
         description: '',
         due: new Date("2024-05-30"),
+        repeat: 0,
         tasks: [
             {
                 id: '4.1',
@@ -125,14 +144,25 @@ const kpis = [
     }
 ];
 
-kpis.sort((k1, k2) => k1.due - k2.due);
-kpis.forEach(kpi => kpi.tasks.sort((t1, t2) => {
-    if (t1.status - t2.status !== 0) return t1.status - t2.status;
-    return t1.date - t2.date;
-}));
+function sortTasks(kpi) {
+    kpi.tasks.sort((t1, t2) => {
+        if (t1.status - t2.status !== 0) return t1.status - t2.status;
+        return t1.date - t2.date;
+    });
+}
+
+function sortKpis() {
+    kpis.sort((k1, k2) => k1.due - k2.due);
+    kpis.forEach(kpi => sortTasks(kpi));
+}
+
+sortKpis();
+
 
 const findKpiById = (id) => {
-    return kpis.filter(k => k.id == id)[0]
+    const kpi = kpis.filter(k => k.id == id)[0];
+    sortTasks(kpi);
+    return kpi;
 }
 
 const getNumberOfFinishedTasks = (kpi) => {
@@ -161,6 +191,13 @@ const getNextKpiId = () => {
     ids = kpis.map(k => +k.id);
     console.log(ids);
     return `${Math.max(...ids) + 1}`;
+}
+
+const getNextTaskId = (kpi) => {
+    if (kpi.tasks.length === 0) return `${kpi.id}.1`; 
+    ids = kpi.tasks.map(k => +k.id.split('.')[1]);
+    console.log(ids);
+    return `${kpi.id}.${Math.max(...ids) + 1}`;
 }
 
 const saveKpi = (kpi) => {

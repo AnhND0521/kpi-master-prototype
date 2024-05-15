@@ -11,7 +11,7 @@
 
 
         <!-- Side bar -->
-        <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: fixed; opacity: 0.80; background: #078D70; z-index: 999;">
+        <div style="width: 336px; height: 1024px; left: 0px; top: 79px; position: fixed; opacity: 0.80; background: #078D70; z-index: 1;">
             <div style="width: 336px; height: 1024px; left: 0px; top: 0px; position: absolute; background: #F5F5F5;  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25)"></div>
             <div class="nav-link" id="nav-kpi-list" style="width: 336px; height: 72px; left: 0px; top: 88px; position: absolute; background: #F8E4FF">
                 <div style="width: 312px; height: 56px; left: 12px; top: 8px; position: absolute; border-radius: 10px"></div>
@@ -47,7 +47,7 @@
 
 
         <!-- Header -->
-        <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 999;">
+        <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 1;">
             <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute; background: #7E56DA"></div>
             <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px" src="img/icon-user.png" />
             <div style="left: 87px; top: 18px; position: absolute; color: white; font-size: 28px; font-family: Arial; font-weight: 700; word-wrap: break-word">KPI Master</div>
@@ -60,13 +60,13 @@
                 <img style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute;" src="img/icon-search.png"></div>
             </div>
             </div>
-            <img style="width: 128px; height: 85px; left: -17px; top: -3px; position: fixed" src="img/logo-white.png" />
+            <img style="width: 128px; height: 85px; left: -17px; top: -3px; position: fixed; z-index: 1;" src="img/logo-white.png" />
         </div>
 
 
 
         <!-- Options -->
-        <div style="width: 40px; height: 6.96px; left: 1310px; top: 133.96px; position: absolute; transform-origin: 0 0; cursor: pointer;">
+        <div id="kpi-options" onclick="showKpiOptions(event)" style="width: 40px; height: 6.96px; left: 1310px; top: 133.96px; position: absolute; transform-origin: 0 0; cursor: pointer;">
           <div style="width: 6.96px; height: 6.96px; left: 0px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
           <div style="width: 6.96px; height: 6.96px; left: 11.93px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
           <div style="width: 6.96px; height: 6.96px; left: 23.86px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
@@ -93,7 +93,7 @@
               <img style="width: 14px; height: 14px; left: 0px; top: 5px; position: absolute" src="img/icon-date.png" />
             </div>
             <div class="button-primary" id="btn-report" style="width: 186px; height: 41px; padding-top: 10px; padding-bottom: 10px; padding-left: 24px; padding-right: 20px; left: 0px; top: 160px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-              <div style="color: white; font-size: 18px; font-family: Roboto; font-weight: 400; line-height: 27px; word-wrap: break-word">Xem báo cáo</div>
+              <div style="color: white; font-size: 18px; font-family: Arial; font-weight: 400; line-height: 27px; word-wrap: break-word">Xem báo cáo</div>
               <div style="width: 24px; height: 24px; position: relative">
                 <img style="width: 24px; height: 24px; left: 4px; top: 0px; position: absolute;" src="img/icon-right-arrow.png">
               </div>
@@ -119,6 +119,13 @@
           <!-- Task table -->
           <div id="task-table" style="width: 954px; height: 369px; left: 387px; top: 499px; position: absolute">
             <div style="width: 954px; height: 0px; left: 0px; top: 43px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+            <div style="width: 849px; height: 25px; left: 105px; top: 0px; position: absolute">
+              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên công việc</div>
+              <div style="width: 160px; height: 25px; left: 237px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Ngày</div>
+              <div style="width: 160px; height: 25px; left: 689px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Trạng thái</div>
+              <div style="width: 94px; height: 25px; left: 350px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Bắt đầu</div>
+              <div style="width: 95px; height: 25px; left: 491px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Kết thúc</div>
+            </div> 
             <!-- <div style="width: 954px; height: 56px; left: 0px; top: 44px; position: absolute">
               <div style="width: 954px; height: 56px; left: 0px; top: 0px; position: absolute; background: #F9F5FF"></div>
               <div style="width: 73px; height: 25px; left: 618px; top: 16px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:45</div>
@@ -186,20 +193,142 @@
                 <div style="width: 72.41px; height: 25px; left: 13.79px; top: 0px; position: absolute; text-align: center; color: #D90000; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">Quá hạn</div>
               </div>
             </div> -->
-            <div style="width: 849px; height: 25px; left: 105px; top: 0px; position: absolute">
-              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên công việc</div>
-              <div style="width: 160px; height: 25px; left: 237px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Ngày</div>
-              <div style="width: 160px; height: 25px; left: 689px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Trạng thái</div>
-              <div style="width: 94px; height: 25px; left: 350px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Bắt đầu</div>
-              <div style="width: 95px; height: 25px; left: 491px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Kết thúc</div>
-            </div> 
             <!-- <div style="width: 73px; height: 25px; left: 618px; top: 288px; position: absolute; text-align: right; color: #0A840A; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:45</div>
             <div style="width: 73px; height: 25px; left: 618px; top: 344px; position: absolute; text-align: right; color: #D90000; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">15:50</div> -->
           </div> 
           <div class="button-primary" id="btn-add-task" style="width: 177px; height: 40px; padding-top: 8px; padding-bottom: 8px; padding-left: 6px; padding-right: 20px; left: 1164px; top: 415px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 3px; display: inline-flex">
             <img style="width: 29px; height: 28px" src="img/icon-plus.png" />
-            <div style="color: white; font-size: 16px; font-family: Roboto; font-weight: 400; line-height: 24px; word-wrap: break-word">Thêm công việc</div>
+            <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Thêm công việc</div>
           </div>
+        </div>
+
+        <div class="modal-backdrop"></div>
+
+        <!-- Add task modal -->
+        <div class="modal" id="modal-add-task" style="width: 753px; height: 780px; left: 343px; top: 128px; position: fixed; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden;">
+          <div style="align-self: stretch; height: 64px; padding-top: 19px; padding-bottom: 20px; padding-left: 53px; padding-right: 464px; background: #F9F5FF; justify-content: flex-start; align-items: flex-start; gap: 244px; display: inline-flex">
+            <div id="task-modal-name" style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm công việc</div>
+            <div class="btn-close" style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; cursor: pointer;">
+              <!-- <div style="width: 33.94px; height: 0px; transform: rotate(45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div>
+              <div style="width: 33.94px; height: 0px; transform: rotate(-45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div> -->
+            </div>
+          </div>
+          <div style="width: 753px; height: 804px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div id="task-modal-title" style="position: absolute; top: 69px; left: 230px; width: 307px; height: 35px; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">
+              Thêm công việc
+            </div>
+            <div style="position: absolute; top: 160px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <input id="task-name" type="text" placeholder="Tên công việc *">
+              </div>
+            </div>
+            <div style="position: absolute; top: 227px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 25px" src="img/icon-date-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%">
+                  <input id="task-date" type="text" placeholder="Ngày *">
+                </div>
+              <!-- </div> -->
+            </div>
+            <div style="position: absolute; top: 294px; left: 151px; width: 226px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 27px" src="img/icon-clock-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word">
+                  <input id="task-start" type="text" placeholder="Bắt đầu *">
+                </div>
+              <!-- </div> -->
+            </div>
+            <div style="position: absolute; top: 294px; left: 390px; width: 226px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 27px" src="img/icon-clock-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word">
+                  <input id="task-end" type="text" placeholder="Kết thúc *">
+                </div>
+              <!-- </div> -->
+            </div>
+            <div style="position: absolute; top: 361px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 25px" src="img/icon-repeat-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word">
+                  <select id="task-repeat" style="width: 380px; color: #8D8F9F;">
+
+                  </select>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div style="position: absolute; top: 428px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="width: 469px; height: 37px; justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 25px" src="img/icon-notification-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word">
+                  <select id="task-noti" style="width: 380px; color: #8D8F9F;">
+                    
+                  </select>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div class="button-primary" id="btn-save-task" style="position: absolute; top: 562px; left: 151px; width: 465px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+              <div style="color: white; font-size: 24px; font-family: Arial; font-weight: 600; line-height: 36px; word-wrap: break-word">Lưu</div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Edit KPI modal -->
+        <div class="modal" id="modal-edit-kpi" style="width: 753px; height: 780px; left: 343px; top: 128px; position: fixed; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden;">
+          <div style="align-self: stretch; height: 64px; padding-top: 19px; padding-bottom: 20px; padding-left: 53px; padding-right: 464px; background: #F9F5FF; justify-content: flex-start; align-items: flex-start; gap: 244px; display: inline-flex">
+            <div style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Chỉnh sửa KPI</div>
+            <div class="btn-close" style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; cursor: pointer;">
+              <!-- <div style="width: 33.94px; height: 0px; transform: rotate(45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div>
+              <div style="width: 33.94px; height: 0px; transform: rotate(-45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div> -->
+            </div>
+          </div>
+          <div style="width: 753px; height: 804px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="position: absolute; top: 69px; left: 230px; width: 307px; height: 35px; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">
+              Chỉnh sửa KPI
+            </div>
+            <div style="position: absolute; top: 160px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <input id="inp-kpi-name" type="text" placeholder="Tên KPI *">
+              </div>
+            </div>
+            <div style="position: absolute; top: 227px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
+                <input id="inp-kpi-description" type="text" placeholder="Mô tả">
+              </div>
+            </div>
+            <div style="position: absolute; top: 294px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 25px" src="img/icon-date-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%">
+                  <input id="inp-kpi-due" type="text" placeholder="Thời hạn *">
+                </div>
+              <!-- </div> -->
+            </div>
+            <div style="position: absolute; top: 361px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+              <!-- <div style="justify-content: flex-start; align-items: center; gap: 8px; display: flex"> -->
+                <img style="width: 25px; height: 25px" src="img/icon-repeat-faded.png" />
+                <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word">
+                  <select id="inp-kpi-repeat" style="width: 380px; color: #8D8F9F;">
+
+                  </select>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div class="button-primary" id="btn-save-kpi" style="position: absolute; top: 500px; left: 151px; width: 465px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+              <div style="color: white; font-size: 24px; font-family: Arial; font-weight: 600; line-height: 36px; word-wrap: break-word">Lưu</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="task-menu" class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton" style="display: none; z-index: 2; position: fixed;">
+          <a onclick="openModalEditTask(event)" class="dropdown-item" style="cursor: pointer;">Chỉnh sửa công việc</a>
+          <a onclick="confirmDeleteTask(event)" class="dropdown-item" style="cursor: pointer;">Xóa công việc</a>
+        </div>
+
+        <div id="kpi-menu" class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton" style="display: none; z-index: 2; position: fixed;">
+          <a onclick="openModalEditKpi(event)" class="dropdown-item" style="cursor: pointer;">Chỉnh sửa KPI</a>
+          <a onclick="confirmDeleteKpi(event)" class="dropdown-item" style="cursor: pointer;">Xóa KPI</a>
         </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -209,48 +338,324 @@
   <script>
 
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = +urlParams.get('id');
-    if (id) {
-        console.log(id);
-        const kpi = findKpiById(id);
-        console.log(kpi);
+    // Load KPI data
+    let kpi;
 
-        $("#btn-back").click(() => window.location.href = 'kpi.html');
+    function renderKpiDetails() {
+      $("#btn-back").click(() => window.location.href = 'kpi.html');
         
-        $("#kpi-name").text(kpi.name);
-        $("#kpi-description").text(kpi.description || 'Không có mô tả');
-        $("#kpi-due").text(`Hạn ${kpi.due.getDate()}/${kpi.due.getMonth()+1}/${kpi.due.getFullYear()}`);
-        $("#kpi-completed-tasks").text(`${getNumberOfFinishedTasks(kpi)}/${kpi.tasks.length}`);
+      $("#kpi-name").text(kpi.name);
+      $("#kpi-description").text(kpi.description || 'Không có mô tả');
+      $("#kpi-due").text(`Hạn ${kpi.due.getDate()}/${kpi.due.getMonth()+1}/${kpi.due.getFullYear()}`);
+      $("#kpi-completed-tasks").text(`${getNumberOfFinishedTasks(kpi)}/${kpi.tasks.length}`);
 
-        const percentage = getCompletedPercentage(kpi);
-        const strokeDasharray = +$("#kpi-progress").css("stroke-dasharray").slice(0, -2);
-        const strokeDashoffset = (100-percentage)/100 * strokeDasharray;
-        $("#kpi-progress").css("stroke-dashoffset", strokeDashoffset);
-        console.log(strokeDashoffset);
+      const percentage = getCompletedPercentage(kpi);
+      const strokeDasharray = +$("#kpi-progress").css("stroke-dasharray").slice(0, -2);
+      const strokeDashoffset = (100-percentage)/100 * strokeDasharray;
+      $("#kpi-progress").css("stroke-dashoffset", strokeDashoffset);
+      console.log(strokeDashoffset);
+      $("#kpi-percent").text(`${Math.round(percentage)}%`);
+    }
 
-        $("#kpi-percent").text(`${Math.round(percentage)}%`);
+    function renderTasks() {
+      const statusColorMap = ['#603EBB', '#0A840A', '#D90000'];
 
-        const statusColorMap = ['#603EBB', '#0A840A', '#D90000'];
-        
-        let y = 44;
-        for (let task of kpi.tasks) {
-            const row = $(`<div style="width: 954px; height: 56px; left: 0px; top: ${y}px; position: absolute">
+      $("#task-table").empty();
+      $("#task-table").append(`<div style="width: 954px; height: 0px; left: 0px; top: 43px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
+            <div style="width: 849px; height: 25px; left: 105px; top: 0px; position: absolute">
+              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên công việc</div>
+              <div style="width: 160px; height: 25px; left: 237px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Ngày</div>
+              <div style="width: 160px; height: 25px; left: 689px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Trạng thái</div>
+              <div style="width: 94px; height: 25px; left: 350px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Bắt đầu</div>
+              <div style="width: 95px; height: 25px; left: 491px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Kết thúc</div>
+            </div> `);
+      let y = 44;
+        kpi.tasks.forEach((task,i) => {
+            const row = $(`<div id="task-${i}" style="width: 954px; height: 56px; left: 0px; top: ${y}px; position: absolute">
               <div style="width: 954px; height: 56px; left: 0px; top: 0px; position: absolute; background: #${y % 2 == 0 ? 'F9F5FF' : 'FFFFFF'}"></div>
               <div style="width: 73px; height: 25px; left: 618px; top: 16px; position: absolute; text-align: right; color: ${statusColorMap[task.status]} ; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${task.end}</div>
               <div style="width: 73px; height: 25px; left: 476px; top: 16px; position: absolute; text-align: right; color: ${statusColorMap[task.status]} ; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${task.start}</div>
               <div style="width: 160px; height: 25px; left: 105px; top: 16px; position: absolute; color: ${statusColorMap[task.status]} ; font-size: 20px; font-family: Arial; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap" title="${task.name}">${task.name}</div>
               <div style="width: 160px; height: 25px; left: 342px; top: 16px; position: absolute; color: ${statusColorMap[task.status]} ; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${task.date.getDate()}/${task.date.getMonth()+1}</div>
-              ${task.status === 1 ? '<img src="img/icon-check-filled.png" style="width: 20px; left: 31px; top: 18px; position: absolute;">' : '<div style="width: 20px; height: 20px; left: 31px; top: 18px; position: absolute; border-radius: 9999px; border: 1px black solid"></div>'}
+              ${task.status === 1 ? `<img class="task-check" onclick="toggleTaskStatus(event)" src="img/icon-check-filled.png" style="width: 20px; left: 31px; top: 18px; position: absolute;">` : `<div class="task-check" onclick="toggleTaskStatus(event)"></div>`}
               <div style="width: 100px; height: 25px; left: 794px; top: 16px; position: absolute">
                 <div style="width: 100px; height: 24px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 20px; border: 1px ${statusColorMap[task.status]} solid"></div>
                 <div style="width: 100px; height: 25px; left: 0px; top: 0px; position: absolute; text-align: center; color: ${statusColorMap[task.status]}; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">${statusValues[task.status]}</div>
               </div>
+              <div class="task-options" onclick="showTaskOptions(event)" style="width: 40px; height: 4px; left: 910px; top: 26px; position: absolute; transform-origin: 0 0; cursor: pointer;">
+                <div style="width: 5px; height: 5px; left: 0px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
+                <div style="width: 5px; height: 5px; left: 7px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
+                <div style="width: 5px; height: 5px; left: 14px; top: 0px; position: absolute; transform-origin: 0 0; background: black; border-radius: 9999px"></div>
+              </div>
             </div>`);
             $("#task-table").append(row);
             y += 57;
+        });
+    }
+
+    function renderInformation() {
+      renderKpiDetails();
+      renderTasks();
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = +urlParams.get('id');
+    if (id) {
+        console.log(id);
+        kpi = findKpiById(id);
+        console.log(kpi);
+
+        renderInformation();
+    }
+
+    function toggleTaskStatus(event) {
+      console.log(event.target);
+      const i = +$(event.target.parentNode).attr("id").slice('task-'.length);
+      console.log(i);
+      const task = kpi.tasks[i];
+      if (task.status === 0 || task.status === 2)
+        task.status = 1;
+      else 
+        task.status = task.date < new Date() ? 2 : 0;
+      console.log(kpi.tasks[i]);
+      renderInformation();
+    }
+
+
+    // Task options menu
+    function showTaskOptions(event) {
+      console.log(event.target);
+      const id = $(event.target.parentNode).attr("id") ?? $(event.target.parentNode.parentNode).attr("id");
+      const i = +id.slice('task-'.length);
+      console.log(i);
+      $("#task-menu").attr("task-index", `${i}`);
+      $("#task-menu").css("top", `${event.clientY}px`);
+      $("#task-menu").css("left", `${event.clientX}px`);
+      $("#task-menu").show();
+      $(".task-options").off('click', showTaskOptions);
+      setTimeout(()=> $(document).click(hideTaskMenu), 100);
+    }
+
+    const menu = $("#task-menu");
+    const triggerButton = $(".task-options");
+
+
+    function hideTaskMenu(event) {
+          console.log('Hiding menu');
+          menu.hide(); // Hide the menu
+          $(document).off('click', hideTaskMenu);
+          setTimeout(()=> $(".task-options").click(showTaskOptions), 100);
+      }
+    
+
+    function confirmDeleteTask(event) {
+      const i = +$(event.target.parentNode).attr("task-index");
+      console.log(i);
+      const task = kpi.tasks[i];
+
+      if (window.confirm("Bạn có chắc muốn xóa công việc '" + task.name + "' ?")) {
+        kpi.tasks.splice(i,1);
+        console.log(kpi.tasks);
+        renderInformation();
+      }
+    }
+
+
+    // KPI options menu
+    function showKpiOptions(event) {
+      console.log(event.target);
+      $("#kpi-menu").css("top", `${event.clientY}px`);
+      $("#kpi-menu").css("left", `${event.clientX}px`);
+      $("#kpi-menu").show();
+      $("#kpi-options").off('click', showKpiOptions);
+      setTimeout(()=> $(document).click(hideKpiMenu), 100);
+    }
+
+
+    function hideKpiMenu(event) {
+          const menu = $("#kpi-menu");
+          console.log('Hiding menu');
+          menu.hide(); // Hide the menu
+          $(document).off('click', hideKpiMenu);
+          setTimeout(()=> $("#kpi-options").click(showKpiOptions), 100);
+      }
+    
+
+    function confirmDeleteKpi(event) {
+      if (window.confirm("Bạn có chắc muốn xóa KPI này?")) {
+        window.location.href = 'kpi.html';
+      }
+    }
+
+
+    // Handle modals;
+    function closeModal() {
+        $(".modal-backdrop").css("display", "none");
+        $(".modal").css("display", "none");
+    }
+
+    function openModalAddTask() {
+        closeModal();
+        $(".modal-backdrop").css("display", "block");
+        $("#modal-add-task").css("display", "block");
+        $("#btn-save-task").off('click', saveTask);
+        $("#btn-save-task").click(addNewTask);
+    }
+
+    function openModalEditTask(event) {
+        const i = +$(event.target.parentNode).attr("task-index");
+        console.log(i);
+        const task = kpi.tasks[i];
+        closeModal();
+        $(".modal-backdrop").css("display", "block");
+        $("#modal-add-task").css("display", "block");
+        $("#modal-add-task").attr("task-index", i);
+        $("#task-modal-title, #task-modal-name").text("Chỉnh sửa công việc");
+        $("#task-name").val(task.name);
+        $("#task-date").val(`${task.date.getFullYear()}-${task.date.getMonth()+1<10?'0':''}${task.date.getMonth()+1}-${task.date.getDate()}`);
+        $("#task-start").val(`${task.start}`);
+        $("#task-end").val(`${task.end}`);
+        $("#task-repeat").val(""+task.repeat);
+        $("#task-noti").val(""+task.noti);
+        $("#btn-save-task").attr("disabled", false);
+        $("#btn-save-task").off('click', addNewTask);
+        $("#btn-save-task").click(saveTask);
+    }
+
+    $("#btn-add-task").click(openModalAddTask);
+    $(".btn-close").click(closeModal);
+
+    // Handle add new task
+    $("#task-date,#inp-kpi-due").focus((event) => $(event.target).attr("type", "date"));
+    $("#task-date,#inp-kpi-due").blur((event) => $(event.target).attr("type", "text"));
+    $("#task-start,#task-end").focus((event) =>$(event.target).attr("type", "time"));
+    $("#task-start,#task-end").blur(() => $(event.target).attr("type", "text"));
+    $("#task-repeat,#inp-kpi-repeat").append(repeatTypes.map((r,i) => $(`<option value="${i}" ${i===0?'selected':''}>${r}</option>`)));
+    $("#task-noti").append(notiTypes.map((n,i) => $(`<option value="${i}" ${i===1?'selected':''}>${n}</option>`)));
+
+    $("#btn-save-task").attr("disabled", true);
+    $("#btn-save-task").off('click');
+    $("#btn-save-task").attr("title", "Vui lòng điền các mục bắt buộc");
+
+    function validateTask() {
+        const name = $("#task-name").val().trim();
+        const date = new Date($("#task-date").val());
+        const start = $("#task-start").val();
+        const end = $("#task-end").val()
+        console.log(name,date,start,end);
+        if (name.length > 0 && date != 'Invalid Date' && start && end) {
+            $("#btn-save-task").attr("disabled", false);
+            $("#btn-save-task").click($("#task-modal-title").text().startsWith("Chỉnh") ? saveTask : addNewTask);
+            $("#btn-save-task").removeAttr("title");
+        } else {
+            if (name.length === 0) {
+                $("#btn-save-task").attr("disabled", true);
+                $("#btn-save-task").off('click');
+                $("#btn-save-task").attr("title", "Vui lòng điền tên công việc");
+            } else if (date == 'Invalid Date') {
+                $("#btn-save-task").attr("disabled", true);
+                $("#btn-save-task").off('click');
+                $("#btn-save-task").attr("title", "Vui lòng chọn ngày");
+            } else if (!start) {
+                $("#btn-save-task").attr("disabled", true);
+                $("#btn-save-task").off('click');
+                $("#btn-save-task").attr("title", "Vui lòng chọn thời gian bắt đầu");
+            } else if (!end) {
+                $("#btn-save-task").attr("disabled", true);
+                $("#btn-save-task").off('click');
+                $("#btn-save-task").attr("title", "Vui lòng chọn thời gian kết thúc");
+            }
         }
     }
 
+    $("#task-name").keydown(validateTask);
+    $("#task-date,#task-start,#task-end").change(validateTask);
+
+    function addNewTask() {
+        console.log("add new task");
+        let task = {
+            id: getNextTaskId(kpi),
+            name: $("#task-name").val(),
+            date: new Date($("#task-date").val()),
+            start: $("#task-start").val(),
+            end: $("#task-end").val(),
+            repeat: $("#task-repeat").val(),
+            noti: $("#task-noti").val(),
+            status: new Date($("#task-date").val()) < new Date() ? 2 : 0
+        }; 
+        kpi.tasks.push(task);
+        sortTasks(kpi);
+        console.log(kpi.tasks);
+        closeModal();
+        renderInformation();
+    }
+
+    function saveTask() {
+      let i = +$("#modal-add-task").attr("task-index");
+      let task = {
+            id: getNextTaskId(kpi),
+            name: $("#task-name").val(),
+            date: new Date($("#task-date").val()),
+            start: $("#task-start").val(),
+            end: $("#task-end").val(),
+            repeat: $("#task-repeat").val(),
+            noti: $("#task-noti").val(),
+            status: kpi.tasks[i].status === 1 ? 1 : new Date($("#task-date").val()) < new Date() ? 2 : 0
+      }; 
+      kpi.tasks.splice(i,1,task);
+      sortTasks(kpi);
+      console.log(kpi.tasks);
+      closeModal();
+      renderInformation();
+    }
+
+    // Handle edit KPI
+    function openModalEditKpi(event) {
+        console.log(kpi);
+        closeModal();
+        $(".modal-backdrop").css("display", "block");
+        $("#modal-edit-kpi").css("display", "block");
+        $("#inp-kpi-name").val(kpi.name);
+        $("#inp-kpi-due").val(`${kpi.due.getFullYear()}-${kpi.due.getMonth()+1<10?'0':''}${kpi.due.getMonth()+1}-${kpi.due.getDate()}`);
+        $("#inp-kpi-description").val(`${kpi.description}`);
+        $("#inp-kpi-repeat").val(""+kpi.repeat);
+        $("#btn-save-kpi").attr("disabled", false);
+        $("#btn-save-kpi").click(updateKpi);
+    }
+
+    function validateKpi() {
+        const name = $("#inp-kpi-name").val().trim();
+        const due = new Date($("#inp-kpi-due").val());
+        if (name.length > 0 && due != 'Invalid Date') {
+            $("#btn-save-kpi").attr("disabled", false);
+            $("#btn-save-kpi").click(updateKpi);
+        } else {
+            if (name.length === 0) {
+                $("#btn-save-kpi").attr("disabled", true);
+                $("#btn-save-kpi").off('click');
+                $("#btn-save-kpi").attr("title", "Vui lòng điền tên KPI");
+            } else {
+                $("#btn-save-kpi").attr("disabled", true);
+                $("#btn-save-kpi").off('click');
+                $("#btn-save-kpi").attr("title", "Vui lòng chọn thời hạn");
+            }
+        }
+    }
+
+    $("#inp-kpi-name").keydown(validateKpi);
+    $("#inp-kpi-due").change(validateKpi);
+
+    function updateKpi() {
+        kpi = {
+            name: $("#inp-kpi-name").val(),
+            description: $("#inp-kpi-description").val(),
+            due: new Date($("#inp-kpi-due").val()),
+            repeat: +$("#inp-kpi-repeat").val(),
+            tasks: kpi.tasks
+        };
+        console.log(kpi);
+        closeModal();
+        renderInformation();
+    }
   </script>
 </body>
