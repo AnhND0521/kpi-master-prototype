@@ -47,7 +47,7 @@
 .modal-backdrop {
   display: none; /* Initially hidden */
   position: fixed;
-  z-index: 1; /* Sit behind other elements but above the content */
+  z-index: 10; /* Sit behind other elements but above the content */
   left: 0;
   top: 0;
   width: 100%;
@@ -114,10 +114,21 @@ input, select {
 }
 
 .task-check {
-    width: 20px; height: 20px; left: 31px; top: 18px; position: absolute; border-radius: 9999px; border: 1px black solid;
+    border-radius: 9999px;
+    border: 1px black solid;
 }
 
 .task-check:hover {
     border: 1.5px black solid;
     cursor: pointer;
+}
+
+.calendar-cell {
+    width: 158px; height: 150px; border: 1px #D9D9D9 solid; 
+    background-color: white;
+}
+
+.calendar-cell:hover {
+    cursor: pointer;
+    background-color: #fcf3ff;
 }

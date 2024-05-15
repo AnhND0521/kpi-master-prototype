@@ -208,3 +208,7 @@ const saveKpi = (kpi) => {
     kpis.push(kpi);
     return kpi;
 }
+
+const getAllTasks = () => {
+    return kpis.reduce((acc, kpi) => [...acc, ...kpi.tasks], []);
+}

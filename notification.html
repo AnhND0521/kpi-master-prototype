@@ -135,7 +135,7 @@
     }
 
     const notiList = $("#noti-list");
-    const tasks = kpis.reduce((acc, kpi) => [...acc, ...kpi.tasks], []);
+    const tasks = getAllTasks();
     console.log(tasks);
     const notis = tasks.filter(t => t.status !== 1).map(t => {return {
         type: t.status,
