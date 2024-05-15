@@ -1,6 +1,6 @@
 $("#nav-home").click(() => window.location.href = 'home.html');
 $("#nav-kpi-list").click(() => window.location.href = 'kpi.html');
-$("#nav-schedule").click(() => window.location.href = 'schedule.html');
+$("#nav-schedule").click(() => window.location.href = 'schedulemonth.html');
 $("#nav-noti").click(() => window.location.href = 'notification.html');
 $("#nav-settings").click(() => window.location.href = 'settings.html');
 
