@@ -143,3 +143,15 @@ dialog[open] {
     cursor: pointer;
     background-color: #fcf3ff;
 }
+
+.setting-item {
+    cursor: pointer;
+}
+
+.setting-item > .background {
+    background: #F5F5F5;
+}
+
+.setting-item:hover > .background {
+    background: #F9E9FF;
+}
