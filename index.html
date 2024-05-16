@@ -28,10 +28,10 @@
           <img style="width: 582px; height: 305px; left: 679px; top: 49px; position: absolute" src="img/image-kpi.png" />
         </div>
         <div style="width: 1331px; height: 148px; left: 33px; top: 7px; position: absolute">
-          <div style="left: 707px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">How it work</div>
-          <div style="left: 865px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">Service</div>
-          <div style="left: 982px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">Blog</div>
-          <div style="left: 1069px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">About</div>
+          <div style="left: 707px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word; cursor: pointer;">How it work</div>
+          <div style="left: 865px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word; cursor: pointer;">Service</div>
+          <div style="left: 982px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word; cursor: pointer;">Blog</div>
+          <div style="left: 1069px; top: 62px; position: absolute; color: #2F65E1; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word; cursor: pointer;">About</div>
           <div style="width: 357px; height: 148px; left: 0px; top: 0px; position: absolute">
             <img style="width: 222px; height: 148px; left: 0px; top: 0px; position: absolute" src="img/logo.png" />
             <div style="left: 170px; top: 34px; position: absolute; color: #2F65E1; font-size: 36px; font-family: Arial; font-weight: 700; word-wrap: break-word">KPI Master</div>
@@ -263,6 +263,10 @@
         $(".btn-back-on-reset-password").click(openForgotPasswordModal);
 
         $(".btn-finish-reset-password").click(openLoginModal);
+
+        $(".btn-login").click(() => window.location.href = 'home.html');
+
+        $(".btn-signup-2").click(openLoginModal);
         
     </script>
 </body>
