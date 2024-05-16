@@ -7,7 +7,7 @@
 </head>
 <body>
     <div style="width: 1440px; height: 1024px; position: relative; background: white">
-        <div style="width: 1104px; height: 1024px; left: 336px; top: 79px; position: absolute">
+        <div id="monthly-schedule" style="width: 1104px; height: 1024px; left: 336px; top: 79px; position: absolute">
           <div id="calendar" style="width: 1104px; height: 749px; left: 0px; top: 196px; position: absolute">
             <div style="width: 158px; height: 150px; left: 0px; top: 0px; position: absolute; border: 1px #D9D9D9 solid">
               <div style="width: 158px; height: 149px; left: 0px; top: 1px; position: absolute; background: white"></div>
@@ -195,7 +195,7 @@
               <div style="left: 22px; top: 9px; position: absolute; text-align: center; color: white; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word; cursor: pointer;">Tháng</div>
             </div>
             <div style="padding-left: 28px; padding-right: 28px; padding-top: 9px; padding-bottom: 9px; left: 1px; top: 0px; position: absolute; justify-content: center; align-items: center; display: inline-flex; cursor: pointer;">
-              <div style="color: #5E5E5E; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Tuần</div>
+              <div style="color: #5E5E5E; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word" onclick="switchToWeeklySchedule()">Tuần</div>
             </div>
           </div>
         </div>
@@ -240,6 +240,137 @@
   </div>
 </div>
 
+<!-- Weekly schedule -->
+<div id="weekly-schedule" style="width: 1104px; height: 1024px; left: 336px; top: 79px; position: absolute">
+  <div id="" style="width: 1038px; height: 718px; left: 66px; top: 227px; position: absolute">
+    <div style="width: 1038px; height: 718px; left: 0px; top: 0px; position: absolute">
+      <div style="width: 778px; height: 0px; left: 148px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 778px; height: 0px; left: 297px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 778px; height: 0px; left: 445px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 778px; height: 0px; left: 593px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 778px; height: 0px; left: 741px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 778px; height: 0px; left: 890px; top: 0px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 61px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 121px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 181px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 240px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 300px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 360px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 420px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 480px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 540px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 599px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 659px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+      <div style="width: 1038px; height: 0px; left: 0px; top: 719px; position: absolute; border: 1px rgba(217, 217, 217, 0.50) solid"></div>
+    </div>
+    <div id="tasks" style="width: 738px; height: 546px; left: 2px; top: 85px; position: absolute">
+      <a href="kpi-details.html?id=1">
+        <div style="width: 145px; height: 198px; left: 0px; top: 0px; position: absolute; border-radius: 10px; overflow: hidden">
+          <div style="width: 145px; height: 198px; left: 0px; top: 0px; position: absolute; background: #BBFFC2"></div>
+          <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">8:30 - 11:45</div>
+          <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">IT4110</div>
+          <div style="left: 16px; top: 51px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Giảng dạy</div>
+          <div style="width: 8px; height: 190px; left: 4px; top: 4px; position: absolute; background: #34A853; border-radius: 10px"></div>
+        </div>
+      </a>
+      <div style="width: 145px; height: 195px; left: 148px; top: 351px; position: absolute; border-radius: 10px; overflow: hidden">
+        <div style="width: 145px; height: 195px; left: 0px; top: 0px; position: absolute; background: #BBFFC2"></div>
+        <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">2:15 - 5:30</div>
+        <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">IT4321</div>
+        <div style="left: 16px; top: 51px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Giảng dạy</div>
+        <div style="width: 8px; height: 187px; left: 4px; top: 4px; position: absolute; background: #34A853; border-radius: 10px"></div>
+      </div>
+      <div style="width: 145px; height: 92px; left: 445px; top: 454px; position: absolute; border-radius: 10px; overflow: hidden">
+        <div style="width: 145px; height: 92px; left: 0px; top: 0px; position: absolute; background: #BBFFC2"></div>
+        <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">4:00 - 5:30</div>
+        <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 700; word-wrap: break-word">IT2214</div>
+        <div style="left: 16px; top: 51px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Giảng dạy</div>
+        <div style="width: 8px; height: 84px; left: 4px; top: 4px; position: absolute; background: #34A853; border-radius: 10px"></div>
+      </div>
+      <a href="kpi-details.html?id=2">
+        <div style="width: 145px; height: 179px; left: 148px; top: 35px; position: absolute; border-radius: 10px; overflow: hidden">
+          <div style="width: 145px; height: 179px; left: 0px; top: 0px; position: absolute; background: #CCDFFF"></div>
+          <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">9:00 - 12:30</div>
+          <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Viết báo cáo</div>
+          <div style="left: 16px; top: 51px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nghiên cứu</div>
+          <div style="width: 8px; height: 171px; left: 4px; top: 4px; position: absolute; background: #679CF5; border-radius: 10px"></div>
+        </div>
+      </a>
+      <div style="width: 145px; height: 212px; left: 445px; top: 241px; position: absolute; border-radius: 10px; overflow: hidden">
+        <div style="width: 145px; height: 212px; left: 0px; top: 0px; position: absolute; background: #CCDFFF"></div>
+        <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">12:30 - 4:00</div>
+        <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Nghiên cứu về<br/>vượn Đông Á</div>
+        <div style="left: 16px; top: 69px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nghiên cứu</div>
+        <div style="width: 8px; height: 204px; left: 4px; top: 4px; position: absolute; background: #679CF5; border-radius: 10px"></div>
+      </div>
+      <div style="width: 145px; height: 88px; left: 593px; top: 184px; position: absolute; border-radius: 10px; overflow: hidden">
+        <div style="width: 145px; height: 88px; left: 0px; top: 0px; position: absolute; background: #DED4F3"></div>
+        <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:30 - 1:00</div>
+        <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lunch Seminar</div>
+        <div style="left: 16px; top: 50px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Phục vụ</div>
+        <div style="width: 8px; height: 80px; left: 4px; top: 4px; position: absolute; background: #9974E8; border-radius: 10px"></div>
+      </div>
+      <div style="width: 145px; height: 88px; left: 297px; top: 184px; position: absolute; border-radius: 10px; overflow: hidden">
+        <div style="width: 145px; height: 88px; left: 0px; top: 0px; position: absolute; background: #DED4F3"></div>
+        <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">11:30 - 1:00</div>
+        <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lunch Seminar</div>
+        <div style="left: 16px; top: 50px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Phục vụ</div>
+        <div style="width: 8px; height: 80px; left: 4px; top: 4px; position: absolute; background: #9974E8; border-radius: 10px"></div>
+      </div>
+    </div>
+  </div>
+  <div id="weekdays" style="width: 1038px; height: 69px; left: 66px; top: 158px; position: absolute; border-top: 1px rgba(217, 217, 217, 0.50) solid; border-bottom: 1px rgba(217, 217, 217, 0.50) solid">
+    <div style="left: 55px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Mon<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">13</span></div>
+    <div style="left: 208px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Tue<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">14</span></div>
+    <div style="left: 350px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Wed<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">15</span></div>
+    <div style="left: 500px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Thu<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">16</span></div>
+    <div style="left: 652px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Fri<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">17</span></div>
+    <div style="left: 801px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Sat<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">18</span></div>
+    <div style="left: 949px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Sun<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">19</span></div>
+  </div>
+  <div style="width: 65px; height: 782px; left: 1px; top: 227px; position: absolute; border-top: 1px rgba(217, 217, 217, 0.50) solid; border-right: 1px rgba(217, 217, 217, 0.50) solid">
+    <div style="left: 20px; top: 4px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">6 AM</div>
+    <div style="left: 19px; top: 64px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">7 AM</div>
+    <div style="left: 19px; top: 124px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">8 AM</div>
+    <div style="left: 19px; top: 184px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">9 AM</div>
+    <div style="left: 13px; top: 243px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">10 AM</div>
+    <div style="left: 12px; top: 303px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">11 AM</div>
+    <div style="left: 11px; top: 363px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">12 PM</div>
+    <div style="left: 20px; top: 423px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">1 PM</div>
+    <div style="left: 19px; top: 483px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">2 PM</div>
+    <div style="left: 19px; top: 544px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">3 PM</div>
+    <div style="left: 20px; top: 602px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">4 PM</div>
+    <div style="left: 20px; top: 662px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">5 PM</div>
+    <div style="left: 20px; top: 722px; position: absolute; text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">6 PM</div>
+  </div>
+  <div style="width: 172px; height: 24px; left: 466px; top: 113px; position: absolute">
+    <div id="week-title" style="width: 138px; height: 24px; left: 13px; top: 0px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: Arial; font-weight: 700; word-wrap: break-word">13 - 19/5/2024</div>
+    <div style="width: 9px; height: 16px; left: 150px; top: -2px; position: absolute; cursor: pointer;" onclick="nextWeek()">
+      <img src="img/icon-right-arrow-black.png" width="12px">
+    </div>
+    <div style="width: 9px; height: 16px; left: 0px; top: -2px; position: absolute; cursor: pointer;" onclick="previousWeek()">
+      <img src="img/icon-left-arrow-black.png" width="12px">
+    </div>
+  </div>
+  <div style="width: 375px; height: 25px; left: 59px; top: 57px; position: absolute; color: black; font-size: 32px; font-family: Arial; font-weight: 500; word-wrap: break-word">Lịch trình</div>
+  <div style="width: 65px; padding-left: 5px; padding-right: 5px; left: 1px; top: 158px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-top: 1px rgba(217, 217, 217, 0.50) solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div style="text-align: right; color: #7C7474; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">GMT+7</div>
+  </div>
+  <div style="width: 196px; height: 40px; left: 872px; top: 103px; position: absolute; border-radius: 10px; overflow: hidden">
+    <div style="width: 196px; height: 40px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
+    <!-- <a href="/schedulemonth.html"> -->
+      <div style="padding-left: 22px; padding-right: 22px; padding-top: 9px; padding-bottom: 9px; left: 98px; top: 0px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+        <div style="text-align: center; color: #5E5E5E; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word; cursor: pointer;" onclick="switchToMonthlySchedule()">Tháng</div>
+      </div>
+    <!-- </a> -->
+    <!-- <a href="/scheduleweek.html"> -->
+      <div style="width: 98px; height: 40px; left: 1px; top: 0px; position: absolute">
+        <div style="width: 90px; height: 32px; left: 4px; top: 4px; position: absolute; background: #7E56DA; border-radius: 10px"></div>
+        <div style="left: 28px; top: 9px; position: absolute; color: white; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word; cursor: pointer;">Tuần</div>
+      </div>
+    <!-- </a> -->
+  </div>
+</div>
 
 
         <!-- Header -->
@@ -387,8 +518,13 @@
             const weekdayName = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
             $("#task-list").append($(`<div style="position: absolute; top: 31px; left: 56px; width: 326px; height: 35px; color: black; font-size: 24px; font-family: Arial; font-weight: 500; word-wrap: break-word">${weekdayName[date.getDay()]}, ngày ${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}</div>`));
 
+            const tasks = getTasksByDate(date);
+            console.log(tasks);
+            if (tasks.length === 0) {
+              $("#task-list").append($(`<div style="position: absolute; top: 99px; left: 56px; width: 647.57px; height: 77.35px; position: relative; font-size: 16px; font-family: Arial; font-weight: 400; color: black">Không có công việc nào.</div>`));
+            }
             let y = 99, inc = 20;
-            getTasksByDate(date).forEach(t => {
+            tasks.forEach(t => {
                 const kpi = findKpiById(t.id.split('.')[0]);
                 console.log(kpi);
                 $("#task-list").append($(`<div style="position: absolute; top: ${y}px; left: 56px; width: 647.57px; height: 77.35px; position: relative">
@@ -418,6 +554,87 @@
             window.location.href = url;
         }
 
+
+        function switchToWeeklySchedule() {
+          $("#monthly-schedule").hide();
+          $("#weekly-schedule").show();
+          now.setTime(new Date().getTime());
+          renderWeekCalendar();
+        }
+
+        function switchToMonthlySchedule() {
+          $("#monthly-schedule").show();
+          $("#weekly-schedule").hide();
+          now.setTime(new Date().getTime());
+          renderCalendar();
+        }
+
+        switchToMonthlySchedule();
+
+        function renderWeekCalendar() {
+          let dateRange = [now];
+          let date = new Date(now.getTime());
+          while (date.getDay() !== 1) {
+            date.setTime(date.getTime() - 24*3600*1000);
+            dateRange = [new Date(date.getTime()), ...dateRange];
+          }
+          date = new Date(now.getTime());
+          while (date.getDay() !== 0) {
+            date.setTime(date.getTime() + 24*3600*1000);
+            dateRange = [...dateRange, new Date(date.getTime())];
+          }
+
+          console.log(dateRange);
+
+          const firstDay = dateRange[0];
+          const lastDay = dateRange[6];
+          $("#week-title").text(`${firstDay.getDate()}${firstDay.getMonth() !== lastDay.getMonth() ? '/' + (firstDay.getMonth()+1) : ''} - ${lastDay.getDate()}/${lastDay.getMonth()+1}/${lastDay.getFullYear()}`)
+
+          let y = 55, inc = 153;
+          const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+          $("#weekdays").empty();
+          $("#tasks").empty();
+          dateRange.forEach((d,i) => {
+            $("#weekdays").append($(`<div style="left: ${y}px; top: 8px; position: absolute; text-align: center"><span style="color: #7E56DA; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">${daysOfWeek[d.getDay()]}<br/></span><span style="color: #7E56DA; font-size: 24px; font-family: Arial; font-weight: 600; word-wrap: break-word">${d.getDate()}${d.getMonth()!==date.getMonth() ? '/' + (d.getMonth()+1) : ''}</span></div>`));
+            y += inc;
+
+            let tasks = getTasksByDate(d);
+            // console.log(tasks);
+            let offset = -85;
+            let gap = 60;
+            tasks.forEach(t => {
+              console.log(t);
+              let startOffset = getDuration('6:00', t.start);
+              let durationHeight = getDuration(t.start, t.end);
+              let kpiId = +t.id.split('.')[0];
+              $("#tasks").append($(`<div style="width: 145px; height: ${durationHeight}px; left: ${148*i}px; top: ${offset + startOffset}px; position: absolute; border-radius: 10px; overflow: hidden; cursor: pointer" onclick="openDetailsPopUp(new Date(${d.getTime()}))">
+                <div style="width: 145px; height: 198px; left: 0px; top: 0px; position: absolute; background: ${kpiId===1?'#BBFFC2':kpiId===2?'#CCDFFF':'#DED4F3'}"></div>
+                <div style="left: 16px; top: 8px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">${t.start} - ${t.end}</div>
+                <div style="left: 16px; top: 31px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word; padding-right: 5px">${t.name}</div>
+                <!-- <div style="left: 16px; top: 51px; position: absolute; color: #5E5E5E; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">Giảng dạy</div> -->
+                <div style="width: 8px; height: 190px; left: 4px; top: 4px; position: absolute; background: ${kpiId===1?'#34A853':kpiId===2?'#679CF5':'#9974E8'}; border-radius: 10px"></div>
+              </div>`));
+            });
+          });
+        }
+
+        function getDuration(start, end) {
+          let t1 = start.split(':');
+          let h1 = +t1[0], m1 = +t1[1];
+          let t2 = end.split(':');
+          let h2 = +t2[0], m2 = +t2[1];
+          return (h2-h1)*60 + (m2-m1);
+        } 
+
+        function previousWeek() {
+          now.setTime(now.getTime() - 7*24*3600*1000);
+          renderWeekCalendar();
+        }
+
+        function nextWeek() {
+          now.setTime(now.getTime() + 7*24*3600*1000);
+          renderWeekCalendar();
+        }
         
     </script>
 </body>
