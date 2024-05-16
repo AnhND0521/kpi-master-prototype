@@ -47,9 +47,9 @@
     <!-- Header -->
     <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: fixed; z-index: 1;">
       <div style="width: 1440px; height: 79px; left: 0px; top: 0px; position: absolute; background: #7E56DA"></div>
-      <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px" src="img/icon-user.png" />
+      <img style="width: 45px; height: 45px; left: 1357px; top: 17px; position: absolute; border-radius: 50px; cursor: pointer;" src="img/icon-user.png" onclick="(window.location.href = 'profile.html')"/>
       <div style="left: 87px; top: 18px; position: absolute; color: white; font-size: 28px; font-family: Arial; font-weight: 700; word-wrap: break-word">KPI Master</div>
-      <div style="left: 1220px; top: 23px; position: absolute; color: white; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Nguyen-san</div>
+      <div style="left: 1220px; top: 23px; position: absolute; color: white; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word; cursor: pointer;" onclick="(window.location.href = 'profile.html')">Nguyen-san</div>
       <div style="width: 361px; height: 40px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 539px; top: 19px; position: absolute; background: white; border-radius: 10px; border: 1px #E1E2E9 solid; justify-content: space-between; align-items: flex-start; display: inline-flex">
         <div style="color: #000000; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word; width: 100%">
           <input type="text" placeholder="Tìm kiếm" >
@@ -65,9 +65,9 @@
     <!-- Stats -->
     <div style="width: 596px; height: 760.72px; left: 364px; top: 361px; position: absolute">
       <div style="width: 535px; height: 372.72px; left: 0px; top: 388px; position: absolute">
-        <div style="width: 535px; height: 372.72px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
-        <div style="width: 492.20px; height: 28.53px; left: 21.40px; top: 14.27px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Số công việc hoàn thành tuần qua</div>
-        <img style="width: 492.20px; height: 258.58px; left: 21.40px; top: 55.28px; position: absolute" src="img/img-line-chart.png" />
+        <div style="width: 535px; height: 342.72px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);"></div>
+        <div style="width: 492.20px; height: 28.53px; left: 21.40px; top: 14.27px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word">Hiệu suất làm việc tuần qua</div>
+        <img style="width: 492.20px; height: 258.58px; left: 21.40px; top: 55.28px; position: absolute" src="img/img-efficiency-chart.png" />
       </div>
       <div style="width: 596px; height: 311px; left: 0px; top: 52px; position: absolute">
         <div style="width: 535px; height: 311px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); border-radius: 10px;"></div>
@@ -114,7 +114,7 @@
           <img style="width: 22.49px; height: 22.49px; left: 0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
         </div>
         <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word" onclick="(window.location.href = 'kpi-details.html?id=1')">Chi tiết</div>
         </div>
       </div>
       <div style="width: 482px; height: 213.69px; left: 0px; top: 284.97px; position: absolute">
@@ -135,7 +135,7 @@
           <img style="width: 22.49px; height: 22.49px; left: -0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
         </div>
         <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word" onclick="(window.location.href = 'kpi-details.html?id=2')">Chi tiết</div>
         </div>
       </div>
       <div style="width: 482px; height: 213.69px; left: 0px; top: 518px; position: absolute">
@@ -154,7 +154,7 @@
           <img style="width: 22.49px; height: 22.49px; left: -0px; top: 8.03px; position: absolute" src="img/icon-date.png" />
         </div>
         <div class="button-primary" style="width: 114.07px; height: 44.99px; padding-left: 24px; padding-right: 24px; padding-top: 8px; padding-bottom: 8px; left: 19.28px; top: 147.81px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Chi tiết</div>
+          <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word" onclick="(window.location.href = 'kpi-details.html?id=3')">Chi tiết</div>
         </div>
       </div>
       <div class="link" style="width: 70px; height: 40px; left: 398px; top: 4px; position: absolute; color: #7E56DA; font-size: 16px; font-family: Arial; font-weight: 500; word-wrap: break-word" onclick="(window.location.href = 'kpi.html')">Chi tiết ></div>
@@ -168,8 +168,8 @@
       <div style="width: 257.07px; height: 40.17px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">Lịch của bạn</div>
       <div style="width: 1116.43px; height: 115px; left: 0px; top: 63px; position: absolute">
         <div style="width: 1041px; height: 115px; left: 0px; top: 0px; position: absolute; background: #F3EDFC; border-radius: 10px;"></div>
-        <img style="position: absolute; top: 56px; left: 787px" src="img/icon-right-triangle.png" width="16px">
-        <img style="position: absolute; top: 56px; left: 15px" src="img/icon-left-triangle.png" width="16px">
+        <img style="position: absolute; top: 56px; left: 787px; cursor: pointer;" src="img/icon-right-triangle.png" width="16px">
+        <img style="position: absolute; top: 56px; left: 15px; cursor: pointer;" src="img/icon-left-triangle.png" width="16px">
         <div style="width: 267.43px; height: 18.89px; left: 849px; top: 43px; position: absolute">
           <div style="width: 236.80px; height: 18.89px; left: 30.63px; top: 0px; position: absolute; color: #1A2022; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">BT UI/UX</div>
           <div style="width: 15px; height: 15px; left: 0px; top: 2.44px; position: absolute; border-radius: 9999px; border: 1px black solid"></div>
@@ -178,63 +178,63 @@
           <div style="width: 236.80px; height: 18.89px; left: 30.63px; top: 0px; position: absolute; color: #1A2022; font-size: 12px; font-family: Arial; font-weight: 400; word-wrap: break-word">BT ITSS</div>
           <div style="width: 15px; height: 15px; left: 0px; top: 2.44px; position: absolute; border-radius: 9999px; border: 1px black solid"></div>
         </div>
-        <div style="width: 52px; height: 78px; left: 43px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 43px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Sun</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">07</div>
           <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
         </div>
-        <div style="width: 52px; height: 78px; left: 111px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 111px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Mon</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">08</div>
         </div>
-        <div style="width: 52px; height: 78px; left: 179px; top: 13px; position: absolute">
+        <div class="date-item" style="width: 52px; height: 78px; left: 179px; top: 13px; position: absolute">
           <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Tue</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">09</div>
           <div style="width: 5px; height: 5px; left: 23px; top: 69px; position: absolute; background: white; border-radius: 9999px"></div>
         </div>
-        <div style="width: 52px; height: 78px; left: 247px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 247px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Wed</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">10</div>
         </div>
-        <div style="width: 52px; height: 78px; left: 315px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 315px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thu</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">11</div>
         </div>
-        <div style="width: 52px; height: 78px; left: 383px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 383px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Fri</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">12</div>
         </div>
-        <div style="width: 52px; height: 78px; left: 451px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 451px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Sat</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">13</div>
           <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
         </div>
-        <div style="width: 52px; height: 78px; left: 519px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 519px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Sun</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">14</div>
         </div>
-        <div style="width: 52px; height: 78px; left: 587px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 587px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Mon</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">15</div>
           <div style="width: 5px; height: 5px; left: 23px; top: 68px; position: absolute; background: #7E56DA; border-radius: 9999px"></div>
         </div>
-        <div style="width: 52px; height: 78px; left: 655px; top: 13px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 78px; left: 655px; top: 13px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 37px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 0px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Tue</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 43px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">16</div>
         </div>
-        <div style="width: 278px; height: 80px; left: 723px; top: 11px; position: absolute">
-          <div style="width: 41px; height: 41px; left: 5px; top: 39px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
+        <div class="date-item" style="width: 52px; height: 80px; left: 723px; top: 11px; position: absolute">
+          <div class="date-background" style="width: 41px; height: 41px; left: 5px; top: 39px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
           <div style="width: 52px; height: 29px; left: 0px; top: 2px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Wed</div>
           <div style="width: 152px; height: 29px; left: 126px; top: 0px; position: absolute; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">Tue, 10/5/2024</div>
           <div style="width: 52px; height: 29px; left: 0px; top: 45px; position: absolute; text-align: center; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">17</div>
