@@ -12,5 +12,5 @@ function inputLosesFocus() {
     $($($(this).parent().get(0)).parent().get(0)).css("border-width", "1px");
 }
 
-$("input").focus(inputGainsFocus);
-$("input").blur(inputLosesFocus);
+$("input,select,textarea").focus(inputGainsFocus);
+$("input,select,textarea").blur(inputLosesFocus);

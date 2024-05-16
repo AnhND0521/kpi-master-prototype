@@ -79,7 +79,7 @@
     width: 132.46px; height: 15.54px; left: 111.74px; top: 341.88px; position: absolute; color: #0569FF; font-size: 14px; font-family: Roboto; font-weight: 300; word-wrap: break-word;
 }
 
-input, select {
+input, select, textarea {
     border: none;
     outline: none;
     width: 100%;
