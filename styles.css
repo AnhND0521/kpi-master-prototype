@@ -155,3 +155,18 @@ dialog[open] {
 .setting-item:hover > .background {
     background: #F9E9FF;
 }
+
+.textbox {
+    height: 72px;
+    width: 100%;
+    padding-left: 24px;
+    outline: solid 1px #E1E2E9;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: border 0.1s ease-in-out;
+}
+
+.textbox:focus {
+    outline: 2px solid #7E56DA;
+    transition: border 0.1s ease-in-out;
+}
