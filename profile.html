@@ -147,8 +147,20 @@
     const firstName = document.getElementById("first-name");
     const lastName = document.getElementById("last-name");
     const fullName = document.getElementById("full-name");
+    const inputs = document.getElementsByTagName("input");
+
+    saveButton.disabled = true;
+
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("input", () => {
+        saveButton.disabled = false;
+        console.log("hi");
+      });
+    }
+
     saveButton.addEventListener("click", () => {
       fullName.innerText = `${firstName.value} ${lastName.value}`;
+      saveButton.disabled = true;
     })
   </script>
 </body>
