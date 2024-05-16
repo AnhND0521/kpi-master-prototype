@@ -107,9 +107,9 @@
           <div style="width: 954px; height: 0px; left: 387px; top: 393px; position: absolute; border: 1px black solid"></div>
           <div style="width: 271px; height: 25px; left: 387px; top: 422px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Danh sách công việc</div>
           <img id="btn-back" style="width: 26px; height: 26px; left: 388px; top: 141px; position: absolute; cursor: pointer;" src="img/icon-back.png" />
-          <div style="width: 73px; left: 652px; top: 424px; position: absolute">
+          <div id="btn-filter" style="width: 73px; left: 652px; top: 424px; position: absolute; cursor: pointer;">
             <div style="width: 40px; height: 16px; left: 33px; top: 3px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lọc</div>
-            <div style="width: 22px; height: 22px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 22px; height: 22px; left: 0px; top: 3px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
               <img src="img/icon-filter.png" width="22px">
             </div>
           </div>
@@ -331,6 +331,13 @@
           <a onclick="confirmDeleteKpi(event)" class="dropdown-item" style="cursor: pointer;">Xóa KPI</a>
         </div>
 
+        <div id="filter-menu" class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton" style="display: none; z-index: 2; position: fixed;">
+          <a onclick="removeFilter()" class="dropdown-item" style="cursor: pointer;">Tất cả</a>
+          <a onclick="filterUpcomingTasks()" class="dropdown-item" style="cursor: pointer;">Sắp tới</a>
+          <a onclick="filterCompletedTasks()" class="dropdown-item" style="cursor: pointer;">Đã hoàn thành</a>
+          <a onclick="filterPastDueTasks()" class="dropdown-item" style="cursor: pointer;">Quá hạn</a>
+        </div>
+
 
         <!-- KPI Report -->
         <dialog id="report-dialog" style="width: 755px; height: 828px; position: fixed; top: 100px; left: 245px; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden;">
@@ -411,7 +418,7 @@
       $("#kpi-percent").text(`${Math.round(percentage)}%`);
     }
 
-    function renderTasks() {
+    function renderTasks(tasks) {
       const statusColorMap = ['#603EBB', '#0A840A', '#D90000'];
 
       $("#task-table").empty();
@@ -424,7 +431,7 @@
               <div style="width: 95px; height: 25px; left: 491px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Kết thúc</div>
             </div> `);
       let y = 44;
-        kpi.tasks.forEach((task,i) => {
+        tasks.forEach((task,i) => {
             const row = $(`<div id="task-${i}" style="width: 954px; height: 56px; left: 0px; top: ${y}px; position: absolute">
               <div style="width: 954px; height: 56px; left: 0px; top: 0px; position: absolute; background: #${y % 2 == 0 ? 'F9F5FF' : 'FFFFFF'}"></div>
               <div style="width: 73px; height: 25px; left: 618px; top: 16px; position: absolute; text-align: right; color: ${statusColorMap[task.status]} ; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">${task.end}</div>
@@ -449,7 +456,7 @@
 
     function renderInformation() {
       renderKpiDetails();
-      renderTasks();
+      renderTasks(kpi.tasks);
     }
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -717,5 +724,47 @@
     const reportDialog = document.getElementById("report-dialog");
     $("#btn-report").click(() => reportDialog.showModal());
     $("#report-dialog .btn-close").click(() => reportDialog.close());
+
+
+    // Filter
+    $("#btn-filter").click(showFilterOptions);
+
+
+    function showFilterOptions(event) {
+      console.log(event.target);
+      $("#filter-menu").css("top", `${event.clientY}px`);
+      $("#filter-menu").css("left", `${event.clientX}px`);
+      $("#filter-menu").show();
+      $("#btn-filter").off('click', showFilterOptions);
+      setTimeout(()=> $(document).click(hideFilterMenu), 100);
+    }
+
+
+    function hideFilterMenu(event) {
+          const menu = $("#filter-menu");
+          console.log('Hiding menu');
+          menu.hide(); // Hide the menu
+          $(document).off('click', hideFilterMenu);
+          setTimeout(()=> $("#btn-filter").click(showFilterOptions), 100);
+    }
+
+    function filterUpcomingTasks() {
+      renderTasks(kpi.tasks.filter(t => t.status === 0));
+    }
+
+    
+    function filterCompletedTasks() {
+      renderTasks(kpi.tasks.filter(t => t.status === 1));
+    }
+
+
+    function filterPastDueTasks() {
+      renderTasks(kpi.tasks.filter(t => t.status === 2));
+    }
+
+    
+    function removeFilter() {
+      renderTasks(kpi.tasks);
+    }
   </script>
 </body>
