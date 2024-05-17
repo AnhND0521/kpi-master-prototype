@@ -67,7 +67,7 @@
                 <text id="kpi-percent" x="46px" y="99px" fill="#6586d2" font-size="42px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -166px)">79%</text>
               </svg>
             </div>
-            <div style="width: 237px; height: 25px; left: 0px; top: 124px; position: absolute"><span id="kpi-completed-tasks" style="color: black; font-size: 16px; font-family: Arial; font-weight: 600; word-wrap: break-word">42/60</span><span style="color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word"> công việc đã hoàn tất</span></div>
+            <div style="width: 237px; height: 25px; left: 0px; top: 124px; position: absolute"><span id="kpi-completed-tasks" style="color: black; font-size: 16px; font-family: Arial; font-weight: 600; word-wrap: break-word">42/60</span><span style="color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word"> nhiệm vụ đã hoàn tất</span></div>
             <div id="kpi-description" style="width: 237px; height: 25px; left: 0px; top: 58px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Không có mô tả.</div>
             <div style="width: 249px; height: 25px; left: 0px; top: 92px; position: absolute">
               <div id="kpi-due" style="width: 229px; height: 25px; left: 20px; top: 0px; position: absolute; color: black; font-size: 14px; font-family: Arial; font-weight: 400; word-wrap: break-word">Hạn 31/05/2024</div>
@@ -86,7 +86,7 @@
 
           
           <div style="width: 954px; height: 0px; left: 387px; top: 393px; position: absolute; border: 1px black solid"></div>
-          <div style="width: 271px; height: 25px; left: 387px; top: 422px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Danh sách công việc</div>
+          <div style="width: 271px; height: 25px; left: 387px; top: 422px; position: absolute; color: black; font-size: 22px; font-family: Arial; font-weight: 500; word-wrap: break-word">Danh sách nhiệm vụ</div>
           <img id="btn-back" style="width: 26px; height: 26px; left: 388px; top: 141px; position: absolute; cursor: pointer;" src="img/icon-back.png" />
           <div id="btn-filter" style="width: 73px; left: 652px; top: 424px; position: absolute; cursor: pointer;">
             <div style="width: 40px; height: 16px; left: 33px; top: 3px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 400; word-wrap: break-word">Lọc</div>
@@ -101,7 +101,7 @@
           <div id="task-table" style="width: 954px; height: 369px; left: 387px; top: 499px; position: absolute">
             <div style="width: 954px; height: 0px; left: 0px; top: 43px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
             <div style="width: 849px; height: 25px; left: 105px; top: 0px; position: absolute">
-              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên công việc</div>
+              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên nhiệm vụ</div>
               <div style="width: 160px; height: 25px; left: 237px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Ngày</div>
               <div style="width: 160px; height: 25px; left: 689px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Trạng thái</div>
               <div style="width: 94px; height: 25px; left: 350px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Bắt đầu</div>
@@ -179,7 +179,7 @@
           </div> 
           <div class="button-primary" id="btn-add-task" style="width: 177px; height: 40px; padding-top: 8px; padding-bottom: 8px; padding-left: 6px; padding-right: 20px; left: 1164px; top: 415px; position: absolute; border-radius: 10px; justify-content: center; align-items: center; gap: 3px; display: inline-flex">
             <img style="width: 29px; height: 28px" src="img/icon-plus.png" />
-            <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Thêm công việc</div>
+            <div style="color: white; font-size: 16px; font-family: Arial; font-weight: 400; line-height: 24px; word-wrap: break-word">Thêm nhiệm vụ</div>
           </div>
         </div>
 
@@ -188,7 +188,7 @@
         <!-- Add task modal -->
         <div class="modal" id="modal-add-task" style="width: 753px; height: 780px; left: 343px; top: 128px; position: fixed; background: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); border-radius: 15px; overflow: hidden;">
           <div style="align-self: stretch; height: 64px; padding-top: 19px; padding-bottom: 20px; padding-left: 53px; padding-right: 464px; background: #F9F5FF; justify-content: flex-start; align-items: flex-start; gap: 244px; display: inline-flex">
-            <div id="task-modal-name" style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm công việc</div>
+            <div id="task-modal-name" style="width: 375px; height: 25px; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Thêm nhiệm vụ</div>
             <div class="btn-close" style="width: 24px; height: 24px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; cursor: pointer;">
               <!-- <div style="width: 33.94px; height: 0px; transform: rotate(45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div>
               <div style="width: 33.94px; height: 0px; transform: rotate(-45deg); transform-origin: 0 0; border: 2px #5E5E5E solid"></div> -->
@@ -196,11 +196,11 @@
           </div>
           <div style="width: 753px; height: 804px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
             <div id="task-modal-title" style="position: absolute; top: 69px; left: 230px; width: 307px; height: 35px; text-align: center; color: black; font-size: 28px; font-family: Arial; font-weight: 500; word-wrap: break-word">
-              Thêm công việc
+              Thêm nhiệm vụ
             </div>
             <div style="position: absolute; top: 160px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
               <div style="color: #8D8F9F; font-size: 20px; font-family: Arial; font-weight: 400; line-height: 30px; word-wrap: break-word; width: 100%;">
-                <input id="task-name" type="text" placeholder="Tên công việc *">
+                <input id="task-name" type="text" placeholder="Tên nhiệm vụ *">
               </div>
             </div>
             <div style="position: absolute; top: 227px; left: 151px; width: 465px; height: 51px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 10px; border: 1px #7E56DA solid; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
@@ -303,8 +303,8 @@
 
 
         <div id="task-menu" class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton" style="display: none; z-index: 2; position: fixed;">
-          <a onclick="openModalEditTask(event)" class="dropdown-item" style="cursor: pointer;">Chỉnh sửa công việc</a>
-          <a onclick="confirmDeleteTask(event)" class="dropdown-item" style="cursor: pointer;">Xóa công việc</a>
+          <a onclick="openModalEditTask(event)" class="dropdown-item" style="cursor: pointer;">Chỉnh sửa nhiệm vụ</a>
+          <a onclick="confirmDeleteTask(event)" class="dropdown-item" style="cursor: pointer;">Xóa nhiệm vụ</a>
         </div>
 
         <div id="kpi-menu" class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton" style="display: none; z-index: 2; position: fixed;">
@@ -334,32 +334,32 @@
                 <div style="width: 22px; height: 22px; left: 0px; top: 0px; position: absolute; background: #0A22FF; border-radius: 9999px; border: 1px solid"></div>
                 <div style="width: 22px; height: 22px; left: 0px; top: 36px; position: absolute; background: #EABB19; border-radius: 9999px; border: 1px solid"></div>
                 <div style="width: 22px; height: 22px; left: 0px; top: 69px; position: absolute; background: #5DCC61; border-radius: 9999px; border: 1px solid"></div>
-                <div style="width: 193px; height: 16px; left: 28px; top: 3px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc cần làm (17)</div>
-                <div style="width: 183px; height: 16px; left: 28px; top: 39px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc quá hạn (1)</div>
+                <div style="width: 193px; height: 16px; left: 28px; top: 3px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhiệm vụ cần làm (17)</div>
+                <div style="width: 183px; height: 16px; left: 28px; top: 39px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhiệm vụ quá hạn (1)</div>
                 <div style="width: 163px; height: 16px; left: 28px; top: 72px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Đã hoàn thành (42)</div>
               </div>
               <div style="width: 60px; left: 31px; top: 98px; position: absolute; text-align: center; color: #0569FF; font-size: 14px; font-family: Arial; font-weight: 700; word-wrap: break-word">107/153</div>
               <img style="width: 236px; height: 243px; left: 0px; top: 36px; position: absolute" src="img/img-donut-chart.png" />
-              <div style="width: 128px; height: 29px; left: 53px; top: 124px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">60 <br/>công việc</div>
+              <div style="width: 128px; height: 29px; left: 53px; top: 124px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 600; word-wrap: break-word">60 <br/>nhiệm vụ</div>
             </div>
             <div style="width: 620px; height: 194px; left: 54px; top: 365px; position: absolute">
               <div style="width: 263.25px; height: 29.66px; left: 0px; top: 0px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Báo cáo tiến triển</div>
               <div style="width: 335.55px; height: 29.66px; left: 0px; top: 48px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Mục tiêu: Hoàn thành xuất sắc</div>
-              <div style="width: 129.77px; height: 29.66px; left: 59px; top: 90px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">công việc</div>
+              <div style="width: 129.77px; height: 29.66px; left: 59px; top: 90px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">nhiệm vụ</div>
               <div style="width: 328px; height: 30px; left: 0px; top: 132px; position: absolute; color: black; font-size: 16px; font-family: Arial; font-weight: 400; word-wrap: break-word">Bạn đang có tiến độ tốt! Tiếp tục đi lên!</div>
               <div style="width: 111.23px; height: 31.52px; left: 0px; top: 89px; position: absolute; color: #0569FF; font-size: 16px; font-family: Arial; font-weight: 700; word-wrap: break-word">42/60</div>
               <img style="width: 349px; height: 214px; left: 301px; top: 0px; position: absolute" src="img/img-progress-by-time.png" />
             </div>
             <div style="width: 621.20px; height: 234px; left: 42px; top: 93px; position: absolute">
-              <div style="width: 322.59px; height: 29.83px; left: 10px; top: 0px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Tổng quan công việc</div>
+              <div style="width: 322.59px; height: 29.83px; left: 10px; top: 0px; position: absolute; color: black; font-size: 18px; font-family: Arial; font-weight: 600; word-wrap: break-word">Tổng quan nhiệm vụ</div>
               <div style="width: 195.79px; height: 171.32px; left: 0px; top: 62.68px; position: absolute">
                 <div style="width: 72.72px; height: 42.89px; left: 62px; top: 31.32px; position: absolute; text-align: center; color: #0A22FF; font-size: 36px; font-family: Arial; font-weight: 700; word-wrap: break-word">17</div>
-                <div style="width: 195.79px; height: 39.16px; left: 0px; top: 93px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc<br/>cần làm</div>
+                <div style="width: 195.79px; height: 39.16px; left: 0px; top: 93px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhiệm vụ<br/>cần làm</div>
                 <div style="width: 171.32px; height: 171.32px; left: 12.24px; top: 0px; position: absolute; border-radius: 10px; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
               </div>
               <div style="width: 196.06px; height: 171.55px; left: 425.14px; top: 62.45px; position: absolute">
                 <div style="width: 49.01px; height: 41.66px; left: 72.86px; top: 31.55px; position: absolute; text-align: center; color: #FF0000; font-size: 36px; font-family: Arial; font-weight: 700; word-wrap: break-word">1</div>
-                <div style="width: 196.06px; height: 39.21px; left: 0px; top: 90.02px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Công việc<br/>quá hạn</div>
+                <div style="width: 196.06px; height: 39.21px; left: 0px; top: 90.02px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Arial; font-weight: 400; word-wrap: break-word">Nhiệm vụ<br/>quá hạn</div>
                 <div style="width: 171.55px; height: 171.55px; left: 12.25px; top: 0px; position: absolute; border-radius: 10px; border: 1px rgba(0, 0, 0, 0.50) solid"></div>
               </div>
               <div style="width: 196.06px; height: 171.55px; left: 210.71px; top: 62.45px; position: absolute">
@@ -406,7 +406,7 @@
       $("#task-table").empty();
       $("#task-table").append(`<div style="width: 954px; height: 0px; left: 0px; top: 43px; position: absolute; border: 1px rgba(0, 0, 0, 0.40) solid"></div>
             <div style="width: 849px; height: 25px; left: 105px; top: 0px; position: absolute">
-              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên công việc</div>
+              <div style="width: 160px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Tên nhiệm vụ</div>
               <div style="width: 160px; height: 25px; left: 237px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Ngày</div>
               <div style="width: 160px; height: 25px; left: 689px; top: 0px; position: absolute; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Trạng thái</div>
               <div style="width: 94px; height: 25px; left: 350px; top: 0px; position: absolute; text-align: right; color: black; font-size: 20px; font-family: Arial; font-weight: 500; word-wrap: break-word">Bắt đầu</div>
@@ -496,7 +496,7 @@
       console.log(i);
       const task = kpi.tasks[i];
 
-      if (window.confirm("Bạn có chắc muốn xóa công việc '" + task.name + "' ?")) {
+      if (window.confirm("Bạn có chắc muốn xóa nhiệm vụ '" + task.name + "' ?")) {
         kpi.tasks.splice(i,1);
         console.log(kpi.tasks);
         renderInformation();
@@ -553,7 +553,7 @@
         $(".modal-backdrop").css("display", "block");
         $("#modal-add-task").css("display", "block");
         $("#modal-add-task").attr("task-index", i);
-        $("#task-modal-title, #task-modal-name").text("Chỉnh sửa công việc");
+        $("#task-modal-title, #task-modal-name").text("Chỉnh sửa nhiệm vụ");
         $("#task-name").val(task.name);
         $("#task-date").val(`${task.date.getFullYear()}-${task.date.getMonth()+1<10?'0':''}${task.date.getMonth()+1}-${task.date.getDate()}`);
         $("#task-start").val(`${task.start}`);
@@ -594,7 +594,7 @@
             if (name.length === 0) {
                 $("#btn-save-task").attr("disabled", true);
                 $("#btn-save-task").off('click');
-                $("#btn-save-task").attr("title", "Vui lòng điền tên công việc");
+                $("#btn-save-task").attr("title", "Vui lòng điền tên nhiệm vụ");
             } else if (date == 'Invalid Date') {
                 $("#btn-save-task").attr("disabled", true);
                 $("#btn-save-task").off('click');

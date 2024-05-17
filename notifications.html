@@ -106,7 +106,7 @@
   <script src="common.js"></script>
   <script>
     setHeader();
-    
+
     function randomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
@@ -122,7 +122,7 @@
     console.log(tasks);
     const notis = tasks.filter(t => t.status !== 1).map(t => {return {
         type: t.status,
-        content: t.status === 0 ? `Công việc '${t.name}' đến hạn vào hôm nay! Bạn nhớ hoàn thành nhé!` : `Công việc '${t.name}' đã bị quá hạn! Hãy hoàn thành trước khi quá muộn!`,
+        content: t.status === 0 ? `Nhiệm vụ '${t.name}' đến hạn vào hôm nay! Bạn nhớ hoàn thành nhé!` : `Nhiệm vụ '${t.name}' đã bị quá hạn! Hãy hoàn thành trước khi quá muộn!`,
         time: randomTime(),
         read: randomInt(0,2)
     }});
